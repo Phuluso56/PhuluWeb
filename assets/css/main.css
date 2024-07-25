@@ -92,7 +92,7 @@ body {
 /* Type */
 body, input, select, textarea {
   color: #7f888f;
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 13pt;
   font-weight: 400;
   line-height: 1.65; }
@@ -141,6 +141,11 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     border-bottom: 0; }
 
+
+
+
+
+
 h1 {
   font-size: 4em;
   margin: 0 0 0.5em 0;
@@ -148,6 +153,31 @@ h1 {
 
 h2 {
   font-size: 1.75em; }
+
+h2.psy {
+  background:blue  }
+h2.love {
+  background:pink  }
+h2.medicine {
+  background:rgb(177, 255, 177)  }
+h2.geography {
+  background:rgb(255, 145, 0)  }
+h2.politics {
+  background:aqua  }
+h2.economics {
+  background:rgba(8, 30, 230, 0.329)  }
+h2.convergence {
+  background:rgb(255, 238, 0)  }
+h2.classical {
+  background:mediumspringgreen  }
+h2.mymusic {
+  background:navajowhite  }
+h2.emotions {
+  background:rgb(204, 0, 255)  }
+h2.musicmath {
+  background:blue  }
+h2.mygraph {
+  background:blrgb(157, 255, 0)}
 
 h3 {
   font-size: 1.25em; }
@@ -2272,6 +2302,3 @@ button,
     margin-top: 0;
     padding-top: 0; }
 
-  #MathematicsandLove h1:{
-    color: pink;
-    }
