@@ -176,8 +176,8 @@ h2.emotions {
   background:rgb(204, 0, 255)  }
 h2.musicmath {
   background:blue  }
-h2.mygraph {
-  background:blrgb(157, 255, 0)}
+  h2.mygraph {
+    background:rgb(0, 155, 8)  }
 
 h3 {
   font-size: 1.25em; }
