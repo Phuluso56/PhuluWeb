@@ -153,31 +153,31 @@ h1 {
 
 h2 {
   font-size: 1.75em; }
-
+/*Topic heading*/
 h2.psy {
-  background:blue  }
+  background:rgb(177, 255, 177)   }
 h2.love {
-  background:pink  }
+  background:rgb(177, 255, 177)  }
 h2.medicine {
   background:rgb(177, 255, 177)  }
 h2.geography {
-  background:rgb(255, 145, 0)  }
+  background:rgb(177, 255, 177)   }
 h2.politics {
-  background:aqua  }
+  background:rgb(177, 255, 177)   }
 h2.economics {
-  background:rgba(8, 30, 230, 0.329)  }
+  background:rgb(177, 255, 177)   }
 h2.convergence {
-  background:rgb(255, 238, 0)  }
+  background:rgb(177, 255, 177)   }
 h2.classical {
-  background:mediumspringgreen  }
+  background:navajowhite   }
 h2.mymusic {
   background:navajowhite  }
 h2.emotions {
-  background:rgb(204, 0, 255)  }
+  background:navajowhite   }
 h2.musicmath {
-  background:blue  }
+  background:navajowhite   }
   h2.mygraph {
-    background:rgb(0, 155, 8)  }
+    background:rgb(177, 255, 177)  }
 
 h3 {
   font-size: 1.25em; }
@@ -2302,3 +2302,61 @@ button,
     margin-top: 0;
     padding-top: 0; }
 
+
+    figcaption {
+      background-color:whitesmoke;
+      color: #000000;
+      font: italic smaller sans-serif;
+      text-align: center;
+    }
+
+/* Dark Mode */
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+    strong  {
+      color: white; 
+  }
+    h1, h2, h3, h4, h5, h6, li { color: white;}
+    #sidebar  {
+      background: #333;
+      color: white;
+  }}
+
+/* Music Section */
+.UnderstandingCM  {
+  border: 1px solid black;
+  font-weight: normal;
+  font-style: italic ;
+
+}
+
+.MusicMath {
+  border: 1px solid black;
+
+}
+
+.MusicEmotions {
+  border: 1px solid black;
+
+}
+/* Table data */
+.table, th, td {
+  border:1px solid black;
+  border-collapse: collapse
+}
+
+.Yapping {
+  font-weight: normal;
+  font-style: italic ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+
+/* Mathematics Section */
+
+.MathSubTopics {
+  border: 1px solid black;
+}
