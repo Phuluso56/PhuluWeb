@@ -37,7 +37,7 @@ var data2 = [
 var layout2 = {title: "Harmonics"};
 
 // Display using Plotly
-Plotly.newPlot("Harmonics", data2, layout);
+Plotly.newPlot("Harmonics", data2, layout2);
 
 
 
@@ -65,6 +65,8 @@ new Chart("GiniIndex", {
     title: {
       display: true,
       text: "Countries with highest Gini index 2023"
-    }
+    },
+    GiniIndex : document.getElementById('GiniIndex')
+
   }
 });
