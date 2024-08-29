@@ -44,7 +44,7 @@
 										  <li><a href="#Demand and Supply">Demand and Supply</a></li>
 										  <li><a href="#Comparative and Absolute advantage">Comparative and Absolute advantage</a></li>
 										  <li><a href="#Linear Economic model">Linear Economic model</a></li>
-										  <li><a href="#Production function">Production function</a></li>
+										  <li><a href="#Production Function">Production function</a></li>
 									      <li><a href="#Isocost Lines">Isocost Lines</a></li>
 									      <li><a href="#Indifference curves">Indifference curves</a></li>
 									      <li><a href="#Budget or Feasible Set">Budget or Feasible Set</a></li>
@@ -52,7 +52,8 @@
 									      <li><a href="#Workers best response function">Workers best response function</a></li>
 										  <li><a href="#Firms Isocost lines">Firms Isocost lines</a></li>
 										  <li><a href="#Lorenz curve and Gini Index">Lorenz curve and Gini Index</a></li>
-										  
+										  <li><a href="#Basic solow model">The basic Solow model</a></li>
+
 
 										</div>
 
@@ -371,6 +372,54 @@
 									<p><em>It appears a lot of Southern African countries have high inequalities</em>.</p>
 									
 								</div>
+								</div> 
+
+
+								<!-- Topic Start -->
+								<hr class="major" />
+								<div id="Basic solow model">
+									<h2 class="Ecoh2">The Basic Solow model</h2>
+									<div class="EcoSubTopics">
+									<h4>Assumptions of the model </h4>
+									<p>The <b>Solow model</b> is an  <b>economic model that analyses the economic growth and development of various countries</b>, it helps us tackle the biggest question in macro economics, <em>why are other countries poor while others are rich</em> ?</p><hr>
+									<h4>Assumptions of the model</h4>
+									<p> The model is based on 2  equations. The <b style="color: Navy;">production function</b> which I already talked about <a href="#Production Function">here</a> and the <b style="color: red;">capital accumulation equation</b>. The production function is assumed to have a <b>Cobb Douglas</b> form which is:  <b style="color: Navy;">\(Y=F(K,L)=K^αL^{1-α}\)</b> . The Cobb Douglas production form exhibits a <b>constant return to scale</b>(i.e., double input =double output). We assume firms operate under <b>perfect competition</b>(i.e.,price takers, large number of firms, etc).</p>
+									<p>The <b>cost function</b> is given by <b>\(Y=wL+rK\)</b>, like the  <a href="#Isocost Lines">Isocost</a> I explained here. Hence, profit is given by \( F(K,L)-rK-wL\), in which \( {∂F\over∂L}\)=0 and \( {∂F\over∂K}\)=0, will give us: \( w={∂F\over∂L} =(1-α){Y\over L}\)   and  \( r={∂F\over∂K} =α{Y\over K}\) . this tells us that <b>firms will hire labour until Marginal Product of Labour=wages paid</b>  and buy capital until <b>Marginal Product of Capital=rent paid</b>. hence, the share of output paid to labour is \( w{L\over Y}=(1-α)\) , and the share of output paid to capital is \( r{K\over Y}=α\) . Now suppose <b style="color:Navy ;">output per worker</b> is <b style="color: navy;"> \( y={Y\over L}\)</b>  and <b style="color: skyblue;">output per capital</b> <b style="color: skyblue;">\( k={K\over L}\)</b> . <b style="color: Navy;">$$\therefore y={K^{α}L^{1-α}\over L}={K^{α}\over L^{α}}=k^{α} $$</b> With the following graph:</p>
+									<figure><img src="./Files/Graphs/Graph21-Cobbdouglass.png" style="width:55%"/><figure/>
+									<p style="color: Navy;">The graph illustrates diminishing marginal returns to capital per worker. Firms produce more output per worker with more capital per worker. But as they add more capital per worker, output per worker increases  by less and less.</p><hr>
+									<p>The second equation is the <b style="color: red;">capital accumulation</b> : <b style="color: red;">\( \dot{K}=sY-δK\)</b> , Which means change in capital stock \( \dot{K}\) , equals the amount of <b style="color: red;">investments(sY)</b>, minus <b style="color: red;">depreciation(δK)</b>.<em>(we assume the only use of investment in this economy is to acquire capital)</em>.</p>
+									<p>To write capital accumulation in per worker terms. We use the method of taking logarithms on both sides then find the derivatives. For capital per worker: $$ k={K\over L} \Rightarrow log(k)=log(K)-log(L) $$   $$ \Rightarrow {\dot{k}\over k}={\dot{K}\over K}-{\dot{L}\over L}  $$   and for output per worker: $$ y=k^{α} \Rightarrow log(y)=αlog(k)
+										$$  $$ \Rightarrow{\dot{y}\over y}=α{\dot{k}\over k}  $$  $$ \Rightarrow{\dot{k}\over k}={sY-δK\over K}-{\dot{L}\over L} $$  $$  \Rightarrow {sY\over K}-δ-n $$
+									   </p>
+
+									<p>\({\dot{L}\over L}=n\) because we assume the labour force is constant and <b>change in the labour force is proportional to the population growth n</b>.
+										<b  style="color: red;">$$\therefore \dot{k} ={sy}-(δ+n)k $$</b> is our <b style="color: red;">change in capital per worker</b>. It <b style="color: red;">tells us that change in capital per worker is positively affected by the investment per worker, sy, and negatively affected by  depreciation per worker, δk, and population growth, nk</b>.
+										</p><hr>
+									<p><u>Solving the Solow model:</u> using output per worker and capital accumulation per worker equations, we find the <b>Equilibrium or steady state </b> where change in <b style="color: red;">capital per worker</b>, <b style="color: red;">\(\dot{k}=0\)</b>  <b style="color: navy;">$$y=k^{α}$$</b>
+										 <b style="color: red;">$$ \dot{k} ={sy}-(δ+n)k $$</b>  $$\Rightarrow 0={sy}-(δ+n)k
+										$$  $$\Rightarrow sk^{α}=(δ+n)k   $$  $$\Rightarrow ({s\over {n+ δ}})=k^{1-α}
+										$$  $$\Rightarrow ({s\over {n+ δ}})^{1\over{1-α}}=k   $$
+									   $$\Rightarrow ({s\over {n+ δ}})^{α\over{1-α}}=k^{α}=y
+										$$  <b>$$\therefore y=({s\over {n+ δ}})^{α\over{1-α}} $$</b>
+										According to the Solow steady state \(y\), countries with higher levels of investments<em>(s)</em>, low population growth <em>(n)</em> and low rates of capital depreciation<em>(δ)</em> have higher incomes per worker<em>(y)</em>. As such, increasing population growth reduces the capital per worker accumulation.</p>	
+										<p><b>A graphical representation:</b></p>
+										<figure><img src="./Files/Graphs/Graph22-Solow diagram.png" style="width: 55%;"></figure>
+										<p>The Solow diagram consists of two curves,<b style="color: navy;">investment per person, sy </b> and <b style="color: red;">the amount of new investments per person required to keep the amount of capital per worker constant (n + δ)k .</b> <b>The steady state is where the 2 curves meet, where sy=(n + δ)k. the difference between the 2 curves is change in capital, \(\dot{k}=sy-(n + δ)k\). Suppose an economy begins \(k_0\), then the economy will grow, between \(k_0\) and  \(k_1\). but the closer it gets to \(k_1\)<em>(the steady state)</em>, the slower it will grow, then eventually stop \(k_1\). So basically the economy <a href="./Mathematics.html#Convergence%20and%20Equilibrium">converges</a> to the steady state</b>.<em>(that is 1 flaw of the basic solow model however, it does not explain sustained economic growth. the model has many refined variations however, which account for some of the flaws basic solow model. )</em>  </p>
+										<h4>Here's one example of the steady state of one of the solow variants:</h4>
+										<p>$$y(t)=({s_k\over {n+ δ+g}})^{α\over{1-α}}({µ\over g}e^{ψµ})^{1\overγ}A(t) $$</p>
+										<p>According to this steady state, <u>the things that help improve an economy is:</u></p>
+										<li>High levels of <b>investment(\(s_k\))</b>.</li>
+										<li>High levels of <b>technology(\(A(t)\))</b><em>(Technology is the key to sustained economic growth, as long as technology keeps improving, the economy will keep growing, it will not stuctk in the steady state, like with the basic Solow model. According to this model, AI development will help improve our lives... )</em>.</li>
+										<li>High numbers <b>skilled labour(µ)</b> <em>(that can effectively use said technology)</em>.</li>
+										<li>Spending more time <b>acquiring skills\(e^{ψu}\)</b><em>(education)</em>.</li>
+										<li>Being an open economy that is able to <b>import(m)</b> capital goods to improve productivity.</li>
+										<li><b>Low levels of capital depreciation(δ)</b><em>(depreciation is high when there is poor maintainance... *cough* Eskom *cough*).</em></li>
+										<li><b>Steady population growth rates(g).</li>
+										
+										
+
+
+								     </div>
 								</div> 
 
 								
