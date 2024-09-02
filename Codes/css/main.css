@@ -167,7 +167,7 @@ h2.geography {
 h2.politics {
   background:rgb(177, 255, 177)   }
 h2.economics {
-  background:rgb(177, 255, 177)   }
+  background:rgb(150, 255, 250)   }
 h2.convergence {
   background:rgb(177, 255, 177)   }
 h2.classical {
@@ -2324,7 +2324,10 @@ button,
     strong  {
       color: white; 
   }
-    h1, h2, h3, h4, h5, h6, li,b { color: white;}
+    bdi,b { background-color:whitesmoke;} 
+      h2.Ecoh2 {color: midnightblue;}
+
+    h1, h2, h3, h4, h5, h6, li { color: white;}
     #sidebar  {
       background: dimgray;
       color: white;
