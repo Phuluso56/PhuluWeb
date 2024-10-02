@@ -2366,15 +2366,11 @@ button,
 
 /* Mathematics Section */
 
-.MathSubTopics {
-  border: 1px solid black;
-}
+
 
 /* Economics Section */
 
-.EcoSubTopics {
-  border: 1px solid black;
-}
+
 
 
 /* Return to top scroll */
@@ -2437,3 +2433,16 @@ img {
   transform: scale(1.05);
   background-color: bisque;
 }
+
+.image.left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  top: 0.25rem;
+}
+
+.image.right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  top: 0.25rem;
+}
+
