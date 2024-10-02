@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title>Music</title>
+		<title>Art</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="Codes/css/main.css" />
+		<script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -18,43 +19,263 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="Art.html" class="logo"><strong>ART <strong>Section</a>
+									<a href="Music.html" class="logo"><strong>Art </strong>Section &#9998;</a>
 									<button onclick="DarkMode()">Dark mode &#9789;</button>
 								</header>
+
+								
 								<!-- Return to Top -->
 								<a id="return-to-top"><i class='fas'>&#xf062;</i></a>
+								<body>
+									
+									<div class="container">
+									  <div class="mySlides">
+										<div class="numbertext">1 / 12</div>
+										<img src="./Files/Art/Art1-Roger.jpg" style="width:80%">
+									</div>
+									
+									  <div class="mySlides">
+										<div class="numbertext">2 / 12</div>
+										<img src="./Files/Art/Art2-Kaori.jpg" style="width:80%">
+									</div>
+									
+									  <div class="mySlides">
+										<div class="numbertext">3 / 12</div>
+										<img src="./Files/Art/Art3-Brook.jpg" style="width:80%">
+									</div>
+										
+									  <div class="mySlides">
+										<div class="numbertext">4 / 12</div>
+										<img src="./Files/Art/Art4-Phuluso and Luffy.jpg" style="width:80%">
+									</div>
+									
+									  <div class="mySlides">
+										<div class="numbertext">5 / 12</div>
+										<img src="./Files/Art/Art5-Ugly sky.jpg" style="width:80%">
+									</div>
+										
+									  <div class="mySlides">
+										<div class="numbertext">6 / 12</div>
+										<img src="./Files/Art/Art6-Kakashi.jpg" style="width:80%">
+									</div>
 
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">7 / 12</div>
+										<img src="./Files/Art/Art7-Ace.jpg" style="width:80%">
+									</div>
 
-                                    <img src="./Files/Art/Art1-Roger.jpg" style="width:70%" />
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">8 / 12</div>
+										<img src="./Files/Art/Art8-SkypieaLuffy.jpg" style="width:80%">
+									</div>
 
-                                    <img src="./Files/Art/Art2-Kaori.jpg" style="width:70%" />
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">9 / 12</div>
+										<img src="./Files/Art/Art9-Okakuri.png" style="width:80%">
+									</div>
 
-                                    <img src="./Files/Art/Art3-Brook.jpg" style="width:70%" />
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">10 / 12</div>
+										<img src="./Files/Art/LuffyGraphArt.png" style="width:80%">
+									</div>
 
-                                    <img src="./Files/Art/Art4-Phuluso and Luffy.jpg" style="width:70%"/>
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">11 / 12</div>
+										<img src="./Files/Art/SAGraphArt.png" style="width:80%">
+									</div>
 
-                                    <img src="./Files/Art/Art5-Ugly sky.jpg" style="width:70%" />
-									<hr class="major" />
+									<div class="mySlides">
+										<div class="numbertext">12 / 12</div>
+										<img src="./Files/Art/K331 Theme Graph Art.png" style="width:80%">
+									</div>
+										
+									  <a class="prev" onclick="plusSlides(-1)">❮</a>
+									  <a class="next" onclick="plusSlides(1)">❯</a>
+									
+									  <div class="caption-container">
+										<p id="caption"></p>
+									  </div>
+									
+									  <div class="row">
+										<div class="column">
+										  <img class="demo cursor" src="./Files/Art/Art1-Roger.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gold Roger">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art2-Kaori.jpg" style="width:100%" onclick="currentSlide(2)" alt="Kaori">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art3-Brook.jpg" style="width:100%" onclick="currentSlide(3)" alt="Brook">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art4-Phuluso and Luffy.jpg" style="width:100%" onclick="currentSlide(4)" alt="Me and Luffy">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art5-Ugly sky.jpg" style="width:100%" onclick="currentSlide(5)" alt="Ugly sky">
+										</div>    
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art6-Kakashi.jpg" style="width:100%" onclick="currentSlide(6)" alt="Kakashi">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art7-Ace.jpg" style="width:100%" onclick="currentSlide(7)" alt="Ace">
+										</div>    
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art8-SkypieaLuffy.jpg" style="width:100%" onclick="currentSlide(8)" alt="Skypiea Luffy">
+										</div>
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/Art9-Okakuri.png" style="width:100%" onclick="currentSlide(9)" alt="Okabe and Kurisu">
+										</div>
 
-                                    <img src="./Files/Art/Art6-Kakashi.jpg" style="width:70%" />
-									<hr class="major" />
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/LuffyGraphArt.png" style="width:100%" onclick="currentSlide(10)" alt="Luffy Graph Art">
+										</div>
 
-									<img src="./Files/Art/Art7-Ace.jpg" style="width:70%"/>
-									<hr class="major" />
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/SAGraphArt.png" style="width:100%" onclick="currentSlide(11)" alt="South African Flag Graph Art">
+										</div>
 
-                                    <img src="./Files/Art/Art8-SkypieaLuffy.jpg" style="width:70%" />
-									<hr class="major" />
+										<div class="column">
+											<img class="demo cursor" src="./Files/Art/K331 Theme Graph Art.png" style="width:100%" onclick="currentSlide(12)" alt="Mozart Piano sonata 11, K. 331 1st movement theme">
+										</div>
+									  </div>
+									</div>
+									
+									<script>
+									let slideIndex = 1;
+									showSlides(slideIndex);
+									
+									function plusSlides(n) {
+									  showSlides(slideIndex += n);
+									}
+									
+									function currentSlide(n) {
+									  showSlides(slideIndex = n);
+									}
+									
+									function showSlides(n) {
+									  let i;
+									  let slides = document.getElementsByClassName("mySlides");
+									  let dots = document.getElementsByClassName("demo");
+									  let captionText = document.getElementById("caption");
+									  if (n > slides.length) {slideIndex = 1}
+									  if (n < 1) {slideIndex = slides.length}
+									  for (i = 0; i < slides.length; i++) {
+										slides[i].style.display = "none";
+									  }
+									  for (i = 0; i < dots.length; i++) {
+										dots[i].className = dots[i].className.replace(" active", "");
+									  }
+									  slides[slideIndex-1].style.display = "block";
+									  dots[slideIndex-1].className += " active";
+									  captionText.innerHTML = dots[slideIndex-1].alt;
+									}
+									</script>
+										
+									</body>
 
-									<img src="./Files/Art/Art9-Okakuri.png" style="width:70%" />
-									<hr class="major" 
+									<style>
+										body {
+										  font-family: Arial;
+										  margin: 0;
+										}
+										
+										* {
+										  box-sizing: border-box;
+										  
+										}
+										
+										img {
+										  vertical-align: middle;
+										}
+										
+										/* Position the image container (needed to position the left and right arrows) */
+										.container {
+										  position: relative;
+										}
+										
+										/* Hide the images by default */
+										.mySlides {
+										  display: none;
+										}
+										
+										/* Add a pointer when hovering over the thumbnail images */
+										.cursor {
+										  cursor: pointer;
+										}
+										
+										/* Next & previous buttons */
+										.prev,
+										.next {
+										  cursor: pointer;
+										  position: absolute;
+										  top: 40%;
+										  width: auto;
+										  padding: 16px;
+										  margin-top: -50px;
+										  color: lightskyblue;
+										  font-weight: bold;
+										  font-size: 20px;
+										  border-radius: 0 3px 3px 0;
+										  user-select: none;
+										  -webkit-user-select: none;
+										}
+										
+										/* Position the "next button" to the right */
+										.next {
+										  right: 0;
+										  border-radius: 3px 0 0 3px;
+										}
+										
+										/* On hover, add a black background color with a little bit see-through */
+										.prev:hover,
+										.next:hover {
+										  background-color: rgba(0, 0, 0, 0.8);
+										}
+										
+										/* Number text (1/3 etc) */
+										.numbertext {
+										  color: #f2f2f2;
+										  font-size: 12px;
+										  padding: 8px 12px;
+										  position: absolute;
+										  top: 0;
+										}
+										
+										/* Container for image text */
+										.caption-container {
+										  text-align: center;
+										  background-color: lightskyblue;
+										  padding: 2px 16px;
+										  color: white;
+										}
+										
+										.row:after {
+										  content: "";
+										  display: table;
+										  clear: both;
+										}
+										
+										/* Six columns side by side */
+										.column {
+										  float: left;
+										  width: 16.66%;
+										}
+										
+										/* Add a transparency effect for thumnbail images */
+										.demo {
+										  opacity: 0.6;
+										}
+										
+										.active,
+										.demo:hover {
+										  opacity: 1;
+										}
+										</style>
 
+								
 
-								</section>
+								
+									
+									
 
 						</div>
 					</div>
@@ -73,8 +294,9 @@
 									<li><a class="hover" href="Mathematics.html">Mathematics &#8508; </a></li>
 									<li><a class="hover" href="Economics.html">Economics &#128200; &#128201;</a></li>
 									<li><a class="hover" href="Music.html">Music &#9835;</a></li>
-									<li><a class="hover" href="Art.html">ART</a></li>
+									<li><a class="hover" href="Art.html">ART &#9998;</a></li>
 									<li><a class="hover" href="QuizDemo1.html">General Knowledge Quiz</a></li>
+
                                 </ul>
                             </nav>
 
@@ -107,6 +329,9 @@
 			<script src="Codes/js/breakpoints.min.js"></script>
 			<script src="Codes/js/util.js"></script>
 			<script src="Codes/js/main.js"></script>
+			<script src="./Codes/js/Graphs.js"></script>
+
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
 	</body>
 </html>
