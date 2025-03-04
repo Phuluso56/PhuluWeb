@@ -562,7 +562,7 @@ var chartOptions = {
 
       scaleLabel: {
         display: true,
-        labelString: "People",
+        labelString: "Population",
       }
       
     }]
@@ -626,7 +626,7 @@ new Chart("SAprovinces", {
       },
       scaleLabel: {
         display: true,
-        labelString: "People",
+        labelString: "People(in millions)",
         fontColor: "black"
       }
     }]
