@@ -2,16 +2,6 @@
 <html>
 
 <head>
-       <!-- Google tag (gtag.js) -->
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QS150JSKP"></script>
-       <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
- 
-        gtag('config', 'G-5QS150JSKP');
-      </script>
-
     <title>Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -19,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
     <style id="plotly.js-style-global"></style>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body class="is-preload">
@@ -28,14 +20,107 @@
         <div id="main">
             <div class="inner">
                 <!-- Header -->
-                <header id="header"><a href="Projects.html" class="logo"><strong>Projects&nbsp;</strong>Section &#128449;</a></header><!-- Return to Top --> <a id="return-to-top"><i class="fas"></i></a> <!-- Content -->
+                <header id="header"><a href="Projects.html" class="logo"><strong>Data &nbsp;</strong>Analysis &#128449;</a></header><!-- Return to Top --> <a id="return-to-top"><i class="fas"></i></a> <!-- Content -->
                 <section>
                     <header class="main">
-                        <h1>Projects Section &#128449;</h1>
+                        <h1>Data Analysis Section &#128449;</h1>
                         <h4 class="Yapping">⚠ NB!!! This section looks better when viewed on a PC or using <a style="color: dodgerblue;" href="./Files/Misc/Desktop%20site.jpg">&quot;Desktop site&quot;.</a></h4>
                     </header><!-- Topic Start -->
+
+                    <table style="width:50%">
+                        <tr>
+                          <th>Contents </th>
+                        </tr>
+                        <tr>
+                          <td>
+                          <ol>
+                          <li><a href="#Population Stats">Population Stats</a></li>
+                          <li><a href="#One Piece Stats">One Piece Stats</a></li>
+                          </ol></td>
+                         </tr>
+                        </table>
                     <hr>
-                    <h1>One Piece Stats</h1>
+                    
+                    <!-- Population Section -->
+
+                    <div id="Population Stats">
+                    <h2 class="Data">Population Stats</h2>
+                    <p><em>Last edited March 2025</em></p>
+                    
+                    <!-- Map -->
+                    <h4>Interactive map- countries and their respective populations(2023)</h4>
+                    <div id="regions_div" style="width:100%"></div>
+
+                    <div class="row">
+                        <div class="col-5">
+                       <h5>Some interesting population facts</h5>
+                        <ul>
+                            <li>India surpased China's population in 2022 becoming the most populated country in the world as of 2024.</li>
+                            <li>as of 2024, 281 million people live outside their borders</li>
+                            <li>The United States has the highest number of immigrant population, with over 50 million in 2024, which amounts to 15.2% of the population. Followed by Germany with 16+ million, then Saudi Arabia with 13 million,
+                                the United Kingdom with 11 million. South Africa on the other hand has 2.6 million amounting to 4.1% and is the most immigrated African country.</li>
+                            <li>As of 2024, the male to female ratio is 50.4:49.6</li>
+                            <li>Meanwhile as of 2024, countries with the highest number of emigrants are India(17.5 million), Mexico(11.7 million) , China(10.7 million) and Russia (10.4+ million). South Africa has 800 thousand.</li>
+                            <li>Monaco is the most highly densed country with 25411.4 people per square killometre as of 2024, Iceland is the lowest with 3.67 people per square kilometer.</li>
+                            <li>Asia contains about 60% of earths population.</li>
+                            <li>Nigeria is the most populated country in Africa by a wide margin, followed by Ethiopia then Egypt.</li>
+                            <li>In South Africa more than half the population(35.8 million) live in 3 provinces.</li>
+                        </ul>
+                        </div>
+                        <div class="col-7">
+                            <canvas id="Continents" style="width:100%;"><br></canvas>
+                            <canvas id="SAprovinces" style="width:100%; height:400px"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Total population -->
+                    <div id="Global_Population" style="width: 100%; height: 500px;"></div>
+                    <ul>
+                        <li>The world reached 1 billion population for the first time in the early 1800s, and in 2022, about 200 years later, we reached 8 billion.
+                             It took only 12 years to go from 7 to 8 billion, and it is estimated by the United Nations that it will take another 15 years to reach 9 billion, due to the declining population growth rates.</li>
+                        <li>The population is expected to be 10.4 billion in 2080-2100 according to the United Nations.</li>
+                    <ul>
+
+                    <div class="row">
+                        <div class="col-7">
+                            <canvas id="Births&Deaths" style="width:100%;height:400px" ></canvas>
+                        </div>
+                        <div class="col-4">
+                            <h5>Some pandemics that have caused the largest number of deaths in history.</h5>
+                            <ol>
+                            <li>Black death(1334-1353), 75 to 200 million. </li>
+                            <li>Influenza(1918-1920), 17-100 million. </li>
+                            <li>New world small pox(1520-1600s),25-55 million. </li>
+                            <li>Plague of Justinian(541-549), 15-100 million. </li>
+                            <li>HIV/AIDS(1981-present), 27-48 million. </li>
+                            <li>Covid 19(2020-present), 5-18 million. </li>
+                            <li>The third plague(1855-1959), 5-15 million. </li></ol>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p>The population of our prey, poultry includes chickens, turkeys, Muscovy ducks, mallard ducks
+                                and some other domesticated birds with the purpose of harvesting animal products.</p>                        </div>
+                        <div class="col-9">
+                        <canvas id="Animals" style="width:100%"></canvas>
+                    </div>
+                    </div>
+
+                    <h5>Data sources<h5>
+                        <li>https://data.worldbank.org/indicator/</li>
+                        <li>https://ourworldindata.org/</li>
+                        <li>https://unric.org/</li>
+                        <li>https://www.gavi.org/vaccineswork/historys-seven-deadliest-plagues</li>
+                        <hr>
+
+
+
+                     <!-- One piece -->
+
+                    <div id="One Piece Stats"></div>
+                    <h2 class="Data">One Piece Stats</h2>
+                    <p><em>Last edited on March 2025</em></p>
                     <p>When you're arguing or debating any topic, whether it's politics, sports, anime/series, artists, etc., you need facts, evidence and stats in order to prevail. Stats are essentially more powerful than the former simply because they often encapsulate the other two, plus the fact that in some cases it honestly doesn't even matter if the stats being presented are true or not, or whether they come from a credible source, bottom line is if you have stats of any kind, whatever point you're arguing will hold more weight to it vs when you don't. In this part of the section, I am going to pitch why <strong>One Piece</strong> is a really impressive piece of media, without focusing too much on the story or my anecdotal experience with it, but the stats instead.</p>
                     <div class="row">
                         <div class="col-7">
@@ -57,7 +142,7 @@
                     </div>
                     <div class="row">
                         <div class="col-4">
-                            <p>One Piece is the highest selling manga of all time with an approximate of 516.6 million copies sold. For reference <strong>Dragon ball Z</strong> another titan of a manga franchise, is sitting at no. 5 with 260 million copies sold, and <strong>Naruto</strong> at no. 6 with 250 million, these aren't low numbers by any means, One Piece just gaps all its competition when it comes to manga sales.</p>
+                            <p>One Piece is the highest selling manga of all time with an approximate of 535 million copies sold. For reference <strong>Dragon ball Z</strong> another titan of a manga franchise, is sitting at no. 5 with 260 million copies sold, and <strong>Naruto</strong> at no. 6 with 250 million, these aren't low numbers by any means, One Piece just gaps all its competition when it comes to manga sales.</p>
                             <p>In 2015 and 2022, One Piece set the <strong>Guinness World Record</strong> for <em>&quot;the most copies published for the same comic book series by a single author&quot;.</em></p>
                         </div>
                         <div class="col-4">
@@ -99,14 +184,20 @@
                     <header class="major">
                         <h2>Menu</h2>
                     </header>
+
 					<ul>
 						<li><a class="hover" href="index.html">Homepage</a></li>
-						<li><a class="hover" href="Mathematics.html">Mathematics &#8508; </a></li>
-						<li><a class="hover" href="Economics.html">Economics &#128200; &#128201;</a></li>
-						<li><a class="hover" href="Music.html">Music &#9835;</a></li>
-						<li><a class="hover" href="Projects.html">Projects &#128449;</a></li>
-						<li><a class="hover" href="Art.html">ART &#9998;</a></li>
-						<li><a class="hover" href="QuizDemo1.html">General Knowledge Quiz</a></li>
+                        <li>
+                            <span class="opener">Educational Content</span>
+                            <ul>
+                                <li><a class="hover" href="Mathematics.html">Mathematics &#8508; </a></li>
+                                <li><a class="hover" href="Economics.html">Economics &#128200; &#128201;</a></li>
+                                <li><a class="hover" href="Music.html">Music &#9835;</a></li>
+                            </ul>
+                        </li>
+						<li><a class="hover" href="Projects.html">Data Analysis &#128449;</a></li>
+						<li><a class="hover" href="Art.html">Art Gallery &#9998;</a></li>
+						<li><a class="hover" href="QuizDemo1.html">Quiz</a></li>
 				
 					</ul>
                 </nav><!-- Section -->
@@ -132,6 +223,7 @@
     <script src="Codes/js/util.js"></script>
     <script src="Codes/js/main.js"></script>
     <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="./Codes/js/Maps.js"></script>  
     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 </body>
 
