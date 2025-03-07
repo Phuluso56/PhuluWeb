@@ -562,7 +562,7 @@ var chartOptions = {
 
       scaleLabel: {
         display: true,
-        labelString: "Population",
+        labelString: "People",
       }
       
     }]
@@ -626,7 +626,7 @@ new Chart("SAprovinces", {
       },
       scaleLabel: {
         display: true,
-        labelString: "People(in millions)",
+        labelString: "People",
         fontColor: "black"
       }
     }]
@@ -638,13 +638,753 @@ new Chart("SAprovinces", {
   }
 });
 
+//13. Education lvl Unemp
+
+var Canvas = document.getElementById("EduLvl");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "South Africa",
+    data:  [27.7,26.7,27.6,30.1,32.6,34.5,34.5,32.9,32.9,31.9  ],
+    lineTension: 0,
+    fill: false,
+    borderColor: 'Black'
+  };
+
+var dataSecond = {
+    label: "Graduates",
+    data:[7.3,7.9,7.9,9.5,9.3,12.6,10.6,10.6,11.8,8.7 ],
+    lineTension: 0,
+    fill: false,
+  borderColor: 'limegreen',
+  backgroundColor: "limegreen"
+
+  };
+  
+var dataThird = {
+    label: "Matric",
+    data:[27.5,28.2,28.7,31.4,34,36.5,35.6,34.5,33.8 ],
+    lineTension: 0,
+    fill: false,
+  borderColor: 'orange',
+  backgroundColor: "orange"
+
+  };
+  
+var dataFourth = {
+    label: "No matric",
+    data:[33.1,31.1,32.5,35.2,38.3,39.8,37.6,39.1,38.2 ],
+    lineTension: 0,
+    fill: false,
+  borderColor: 'red',
+  backgroundColor: "red"
+
+  };
+  
+var dataFifth = {
+    label: "Other Tertiary",
+    data:[17.8,15.6,17.2,19.2,21.2,22.3,23.5,22.5,19.8 ],
+    lineTension: 0,
+    fill: false,
+  borderColor: 'darkgreen',
+  backgroundColor: "darkgreen"
+
+  };
+
+var Years = {
+  labels: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2024_Q4'],
+  datasets: [dataFirst, dataSecond,dataThird,dataFourth,dataFifth]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "Education level of the unemployed"
+    },
+  legend: {
+    display: true,
+    position: 'right',
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "First quarter of each year",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Unemploymnt rate(%)",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'line',
+  data: Years,
+  options: chartOptions
+});
 
 
 
 
+//14.  unemployment by groups of people
+
+window.onload = function () {
+
+  var chart = new CanvasJS.Chart("UnemploymentGroups", {
+    animationEnabled: true,
+    title:{
+      text: "Unemployment by groups of people"
+    },
+    axisY: {
+      title: "Unemployment rate",
+      includeZero: true
+    },
+    legend: {
+      cursor:"pointer",
+      itemclick : toggleDataSeries
+    },
+    toolTip: {
+      shared: true,
+      content: toolTipFormatter
+    },
+    data: [{
+      type: "bar",
+      showInLegend: true,
+      name: "All",
+      color: "darkslategrey",
+      dataPoints: [
+        { y: 6.7, label: "White" },
+        { y: 14, label: "Indian/Asian" },
+        { y: 22.3, label: "Coloured" },
+        { y: 35.8, label: "Black" },
+        { y: 31.9, label: "South Africa" }
+      ]
+    },
+    {
+      type: "bar",
+      showInLegend: true,
+      name: "Male",
+      color: "darkblue",
+      dataPoints: [
+        { y: 5.8, label: "White" },
+        { y: 11.6, label: "Indian/Asian" },
+        { y: 22.1, label: "Coloured" },
+        { y: 33.9, label: "Black" },
+        { y: 30.1, label: "South Africa" }
+      ]
+    },
+    {
+      type: "bar",
+      showInLegend: true,
+      name: "Female",
+      color: "deeppink",
+      dataPoints: [
+        { y: 7.9, label: "White" },
+        { y: 17.6, label: "Indian/Asian" },
+        { y: 22.6, label: "Coloured" },
+        { y: 38, label: "Black" },
+        { y: 33.9, label: "South Africa" }
+      ]
+    }]
+  });
+  chart.render();
+  
+  function toolTipFormatter(e) {
+    var str = "";
+    var total = 0 ;
+    var str3;
+    var str2 ;
+    for (var i = 0; i < e.entries.length; i++){
+      var str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\">" + e.entries[i].dataSeries.name + "</span>: <strong>"+  e.entries[i].dataPoint.y +"%" + "</strong> <br/>" ;
+      total = e.entries[i].dataPoint.y + total;
+      str = str.concat(str1);
+    }
+    str2 = "<strong>" + e.entries[0].dataPoint.label +"</strong> <br/>";
+    str3 = "<span style = \"color:Tomato\"> </span><strong>"  + "</strong><br/>";
+    return (str2.concat(str)).concat(str3);
+  }
+  
+  function toggleDataSeries(e) {
+    if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+      e.dataSeries.visible = false;
+    }
+    else {
+      e.dataSeries.visible = true;
+    }
+    chart.render();
+  }
+  
+  }
+
+  //17. Working age population
+
+  var Canvas = document.getElementById("Workforce");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var Workforce = {
+    label: "South Africa",
+    data:  [17100000,8000000,3500000,13000000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: ['springgreen','crimson','dimgray','lightgray']
+  };
+
+
+var Years = {
+  labels: ['Employed', 'Unemployed', 'Discouraged work seekers', 'Not economically active'],
+  datasets: [Workforce]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "People of working age(15-64)"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: false,
+        labelString: "",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Population",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'bar',
+  data: Years,
+  options: chartOptions
+});
+
+
+//18. Areas of employment
+
+var xValues = ["Formal sector", "Informal sector", "Private households","Agriculture"];
+var yValues = [11700000, 3300000, 1100000, 924000];
+var barColors = [
+  "darkslategrey","skyblue","lightcyan","springgreen"];
+
+new Chart(document.getElementById('Sectors').getContext("2d"), {
+  type: "pie",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+  },
+  options: {
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        boxWidth: 20,
+        fontColor: 'black'
+      }
+    },
+  title: {
+    display: true,
+    text: "Areas of employment"
+  }
+  }
+});
 
 
 
+//19. reasons for unemployment
 
+var Canvas = document.getElementById("Unemploymentreasons");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "South Africa",
+    data:  [3421000,2060000,1889000,401000,220000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: ['brown','tomato','maroon','salmon','orangered']
+  };
+
+
+var Years = {
+  labels: ['New entrants','Job losers','Other','Re-entrants', 'Job leavers'],
+  datasets: [dataFirst]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "reasons for unemployment"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: false,
+        labelString: "",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Population",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'bar',
+  data: Years,
+  options: chartOptions
+});
+
+
+
+//20. Labour force characteristics by age group 
+
+
+var Canvas = document.getElementById("Agesofwork");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Employed",
+    data:  [1102000,4719000,5334000,4148000,1775000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: "springgreen"
+  };
+  
+ var dataSecond = {
+    label: "Unemployed",
+    data:  [1629000,3064000,1994000,1075000,228000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: "crimson"
+  };
+  
+ var dataThird = {
+    label: "Not economically active",
+    data:  [7555000,2830000,1890000,1752000,2465000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: "dimgray"
+  };
+
+
+var Years = {
+  labels: ['15-24 yrs', '25-34 yrs', '35-44 yrs', '45-54 yrs','55-64 yrs'],
+  datasets: [dataFirst,dataSecond,dataThird]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "Labour force characteristics by age group"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: false,
+        labelString: "",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Population",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'bar',
+  data: Years,
+  options: chartOptions
+});
+
+
+//21.  Working hours
+
+
+var Canvas = document.getElementById("Workinghours");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Employed",
+    data:  [509000
+,1256000,1230000,9554000,4529000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: ["springgreen",'springgreen','springgreen','darkgreen','forestgreen']
+  };
+  
+
+
+var Years = {
+  labels: ['0-15 hours', '15–29 hours', '30–39 hours', '40-45 hours','45h & more'],
+  datasets: [dataFirst]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "Working hours per week"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: false,
+        labelString: "",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Employed Population",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'bar',
+  data: Years,
+  options: chartOptions
+});
+
+
+
+// 22. Employment by province
+
+var Canvas = document.getElementById("Employmentbyprovince");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Employed",
+    data:  [5081000,2892000,2812000,1543000,1455000,1255000,935000,750000,355000],
+    lineTension: 0,
+    fill: false,
+    backgroundColor:'green'
+  };
+
+
+var Years = {
+  labels: ['Gauteng','Kwazulu Natal','Western cape','Limpopo','Eastern cape','Mpumalanga','North  West','Free state','Northern cape'],
+  datasets: [dataFirst]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "Provinces"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: false,
+        labelString: "",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Employed people",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'bar',
+  data: Years,
+  options: chartOptions
+});
+
+
+
+//23. Unemployment rate
+
+var Canvas = document.getElementById("SAUnemploymentrate");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Unemployment rate(%)",
+    data:  [20.11, 20.37, 20.3, 20.07, 19.8, 19.64, 19.68, 19.82, 19.93, 19.84, 19.73, 19.66, 19.73, 19.63, 19.56, 19.43, 19.39, 19.51, 20.51, 23.18, 21.42, 21.79, 22.04, 22.61, 22.87, 24.02, 23.99, 24.22, 25.54, 24.34, 28.77, 28.84, 27.99],
+    lineTension: 0,
+    fill: false,
+    backgroundColor:'crimson',
+    borderColor:'crimson'
+  };
+
+
+var Years = {
+  labels:['1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+  datasets: [dataFirst]
+};
+
+var chartOptions = {
+    title: {
+      display: true,
+      text: "SA Unemployment rate(%)"
+    },
+  legend: {
+    display: false,
+    labels: {
+      boxWidth: 20,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+    xAxes: [{
+      gridLines: {
+        display: false,
+        color: "black"
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Years",
+        fontColor: "black"
+      }
+    }],
+    yAxes: [{
+                    ticks: {
+                    // Shorthand the millions
+                    callback: function(value, index, values) {
+                      if (value >= 1000000000 || value <= -1000000000 ) {
+                        return value / 1e9 + 'B';
+                      } else if (value >= 1000000 || value <= -1000000) {
+                        return value / 1e6 + 'M';
+                      } else  if (value >= 1000 || value <= -1000) {
+                        return value / 1e3 + 'K';
+                      }
+                      return value;
+                    }
+                },
+      gridLines: {
+        color: "black",
+        borderDash: [0.5, 0.6],
+        
+      },
+      scaleLabel: {
+        display: true,
+        labelString: "Unemployment rate(%)",
+        fontColor: "black"
+      }
+    }]
+  }
+};
+
+var lineChart = new Chart(Canvas, {
+  type: 'line',
+  data: Years,
+  options: chartOptions
+});
 
 
