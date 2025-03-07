@@ -35,6 +35,7 @@
                           <td>
                           <ol>
                           <li><a href="#Population Stats">Population Stats</a></li>
+                          <li><a href="#Unemployment">Employment and unemployment South Africa</a></li>
                           <li><a href="#One Piece Stats">One Piece Stats</a></li>
                           </ol></td>
                          </tr>
@@ -55,16 +56,15 @@
                         <div class="col-5">
                        <h5>Some interesting population facts</h5>
                         <ul>
-                            <li>India surpased China's population in 2022 becoming the most populated country in the world as of 2024.</li>
-                            <li>as of 2024, 281 million people live outside their borders</li>
-                            <li>The United States has the highest number of immigrant population, with over 50 million in 2024, which amounts to 15.2% of the population. Followed by Germany with 16+ million, then Saudi Arabia with 13 million,
-                                the United Kingdom with 11 million. South Africa on the other hand has 2.6 million amounting to 4.1% and is the most immigrated African country.</li>
-                            <li>As of 2024, the male to female ratio is 50.4:49.6</li>
-                            <li>Meanwhile as of 2024, countries with the highest number of emigrants are India(17.5 million), Mexico(11.7 million) , China(10.7 million) and Russia (10.4+ million). South Africa has 800 thousand.</li>
-                            <li>Monaco is the most highly densed country with 25411.4 people per square killometre as of 2024, Iceland is the lowest with 3.67 people per square kilometer.</li>
-                            <li>Asia contains about 60% of earths population.</li>
+                            <li>India surpassed China's population in 2022 becoming the most populated country in the world as of 2024.</li>
+                            <li>As of 2024, 281 million people live outside their borders.</li>
+                            <li>The United States has the highest immigrant population, with over 50 million in 2024, which amounts to 15.2% of the population. It is followed by Germany with 16+ million, Saudi Arabia with 13 million, and the United Kingdom with 11 million. South Africa, on the other hand, has 2.6 million, amounting to 4.1%, and is the most immigrated African country.</li>
+                            <li>As of 2024, the male-to-female ratio is 50.4:49.6</li>
+                            <li>Meanwhile as of 2024, countries with the highest number of emigrants are India(17.5 million), Mexico(11.7 million), China(10.7 million), and Russia (10.4+ million). South Africa has 800 thousand.</li>
+                            <li>Monaco is the most highly dense country with 25411.4 people per square kilometer as of 2024, Iceland is the lowest with 3.67 people per square kilometer.</li>
+                            <li>Asia contains about 60% of the earth's population.</li>
                             <li>Nigeria is the most populated country in Africa by a wide margin, followed by Ethiopia then Egypt.</li>
-                            <li>In South Africa more than half the population(35.8 million) live in 3 provinces.</li>
+                            <li>In South Africa, more than half the population(35.8 million) live in 3 provinces.</li>
                         </ul>
                         </div>
                         <div class="col-7">
@@ -100,8 +100,8 @@
 
                     <div class="row">
                         <div class="col-3">
-                            <p>The population of our prey, poultry includes chickens, turkeys, Muscovy ducks, mallard ducks
-                                and some other domesticated birds with the purpose of harvesting animal products.</p>                        </div>
+                            <p>The population of our prey, poultry includes chickens, turkeys, Muscovy ducks, mallard ducks, and some other domesticated birds with the purpose of harvesting animal products.
+                            </p></div>
                         <div class="col-9">
                         <canvas id="Animals" style="width:100%"></canvas>
                     </div>
@@ -116,10 +116,59 @@
 
 
 
+
+
+                    <!--Unemployment-->
+                    <div id="Unemployment"></div>
+                    <h2 class="Data">Employment and unemployment South Africa</h2>
+                    <em>Last edited March 2025</em>
+                    <p>Some interesting insights regarding employment and unemployment from the Quarterly Labour Force Survey 2024 quarter 4 released on 18 February 2025
+                        by Stats SA. For the full comprehensive report visit: <a src="https://www.statssa.gov.za/publications/P0211/P02114thQuarter2024.pdf">https://www.statssa.gov.za/publications/P0211/P02114thQuarter2024.pdf</a>.</p>
+                    <h3>Unemployment</h3>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Data from:<a href="https://ourworldindata.org/">https://ourworldindata.org/</a>, it is the only data not from the Stats SA report in this segment.</p>
+                                <canvas id="SAUnemploymentrate" style="width:100%;"></canvas></div>
+                            <div class="col-4">
+                                <p>According to the official definition, Unemployed people(15-64 years) are those who are not employed and are actively looking for work, are able to work, and are available to work, but are unable to find work.</p>
+                                <p>The highest rises in the rate of unemployment are in 2009 and 2021, which can be linked to the 2008-2009 global financial crisis and the 2020-2022 Covid-19 pandemic.</p>
+                            </div></div>
+
+                            <p>Below are the unemployment rates according to the level of education of individuals. From these, we can see the unemployment rates from graduates(including bachelor's degrees, honors, and above) and people with
+                                 qualifications from other tertiaries are always lower than the national unemployment rate, while those with no matric or only matric are always above.</p>
+                                <canvas id="EduLvl" style="width:100%"></canvas>
+                                <p>Below is the unemployment levels according to race and sex.</p>
+                            <div id="UnemploymentGroups" style="width: 100%; height:500px"></div>
+                            <p>Below are the reasons for unemployments, as evident it is most difficult for people entering the job market for the first time.</p>
+                            <canvas id="Unemploymentreasons" style="width:100%;max-width:600px"></canvas>
+
+                            <h3>The characteristics of the labour force</h3>
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>These are people of working age in South Africa, amounting to 41.6 million. They can be classified into 2 categories, the labour force which includes the employed and unemployed,
+                                        amounts to approximately 25.1 million. And the not economically active includes discouraged work seekers(21%) and other not economic active individuals which comprise Students(37.3%),
+                                        Home-maker(13.6%), too old or too young for work(10.9%), illness/disability (9.3), other(8%).</p></div>
+                                <div class="col-8"> 
+                                    <canvas id="Workforce" style="width:100%;"></canvas>
+                                </div></div>
+
+                    <p>Levels of employment by province</p>
+                    <canvas id="Employmentbyprovince" style="width:100%"></canvas>
+                    <div class="row">
+                        <div class="col-7">
+                            <canvas id="Agesofwork" style="width:100%"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <canvas id="Sectors" style="width:100%"></canvas>
+                        </div></div>
+                        <p>below is the division of hours worked by each of the employed persons(17.1 million total) in a week: </p>
+                        <canvas id="Workinghours" style="width:100%;max-width:600px"></canvas>
+
                      <!-- One piece -->
 
                     <div id="One Piece Stats"></div>
                     <h2 class="Data">One Piece Stats</h2>
+
                     <p><em>Last edited on March 2025</em></p>
                     <p>When you're arguing or debating any topic, whether it's politics, sports, anime/series, artists, etc., you need facts, evidence and stats in order to prevail. Stats are essentially more powerful than the former simply because they often encapsulate the other two, plus the fact that in some cases it honestly doesn't even matter if the stats being presented are true or not, or whether they come from a credible source, bottom line is if you have stats of any kind, whatever point you're arguing will hold more weight to it vs when you don't. In this part of the section, I am going to pitch why <strong>One Piece</strong> is a really impressive piece of media, without focusing too much on the story or my anecdotal experience with it, but the stats instead.</p>
                     <div class="row">
@@ -221,10 +270,11 @@
     <script src="Codes/js/browser.min.js"></script>
     <script src="Codes/js/breakpoints.min.js"></script>
     <script src="Codes/js/util.js"></script>
-    <script src="Codes/js/main.js"></script>
     <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="Codes/js/main.js"></script>
     <script src="./Codes/js/Maps.js"></script>  
     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
+
