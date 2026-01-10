@@ -263,6 +263,56 @@
 
 })(jQuery);
 
+// Collapse content code
+
+document.addEventListener("DOMContentLoaded", function () {
+  var coll = document.getElementsByClassName("collapsible");
+
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      var content = this.nextElementSibling;
+
+      if (!content || !content.classList.contains("Collapse-content")) return;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+});
+
+
+//Image slider
+
+document.querySelectorAll('.js-slider').forEach(slider => {
+  const slides = slider.querySelectorAll('.slide');
+  const prevBtn = slider.querySelector('.prev');
+  const nextBtn = slider.querySelector('.next');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[i].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+});
+
+
+
+
 //Dark Mode
 function DarkMode() {
 	var element = document.body;
@@ -333,6 +383,9 @@ var layout2 = {title: "Harmonics"};
 
 // Display using Plotly
 Plotly.newPlot("Harmonics", data2, layout2);
+
+
+
 
 
 
