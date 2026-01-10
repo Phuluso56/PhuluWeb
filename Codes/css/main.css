@@ -156,30 +156,12 @@ h1 {
 h2 {
   font-size: 1.75em; }
 /*Topic heading*/
-h2.psy {
+h2.MathTopic {
   background:rgb(177, 255, 177)   }
-h2.love {
-  background:rgb(177, 255, 177)  }
-h2.medicine {
-  background:rgb(177, 255, 177)  }
-h2.geography {
-  background:rgb(177, 255, 177)   }
-h2.politics {
-  background:rgb(177, 255, 177)   }
-h2.economics {
-  background:rgb(150, 255, 250)   }
-h2.convergence {
-  background:rgb(177, 255, 177)   }
-h2.classical {
+h2.MusicTopic {
   background:royalblue   }
-h2.mymusic {
-  background:royalblue  }
-h2.emotions {
-  background:royalblue   }
-h2.musicmath {
-  background:royalblue   }
-  h2.mygraph {
-    background:rgb(177, 255, 177)  }
+
+
 
 h2.Ecoh2 {
   background:rgb(150, 255, 250)   }
@@ -2449,3 +2431,111 @@ img {
   top: 0.25rem;
 }
 
+/*Collapse content*/
+
+.collapsible {
+  background-color: royalblue  ;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+
+.active, .collapsible:hover {
+  background-color: skyblue;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.Collapse-content {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+/*New button*/
+
+.badge {
+  background-color: red;
+  color: white;
+  text-align: center;
+
+}
+
+
+
+
+/* Image Slides */
+
+
+.js-slider {
+  width: 80%;
+  max-width: 800px;
+  height: 420px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  background: green;
+  border-radius: 10px;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    background-color: #a3e9c0;
+
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Buttons */
+.js-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.js-slider .prev { left: 10px; }
+.js-slider .next { right: 10px; }
