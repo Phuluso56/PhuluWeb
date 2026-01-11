@@ -2437,7 +2437,6 @@ img {
   background-color: royalblue  ;
   color: white;
   cursor: pointer;
-  padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
@@ -2546,7 +2545,7 @@ img {
 
 
 .flip-card {
-  width: 300px;
+  width: 90%;
   perspective: 1000px;
   margin: 40px;
 }
