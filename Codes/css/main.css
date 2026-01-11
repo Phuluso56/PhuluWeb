@@ -2546,7 +2546,7 @@ img {
 
 
 .flip-card {
-  width: 50%;          
+  width: 90%;          
   max-width: 400px;    /* Prevents it from getting too big on PC */
   perspective: 1000px;
   margin: 40px left;   /* "auto" centers the card on the page */
