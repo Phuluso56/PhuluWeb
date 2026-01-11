@@ -49,10 +49,10 @@
                                  <li type="i"><a href="#Mathematics and Politics">Mathematics and Politics</a></li>
                                  <li type="i"><a href="#Mathematics and Economics">Mathematics and Economics</a></li>
                                  <li type="i"><a href="#Mathematics and Music">Mathematics and Music</a></li>
-                                 <li type="i"><a href="#Mathematics and Art">Mathematics and Art<span class="badge">New</span></a></li>
+                                 <li type="i"><a href="#Mathematics and Art">Mathematics and Art <span class="badge">New</span></a></li>
                               </ol>
                               <li><a href="#Convergence and Equilibrium">Convergence and Equilibrium</a></li>
-                              <li><a href="#Statistical Misconceptions and Misuses">Statistical Misconceptions and Misuses<span class="badge">New</span></a></li>
+                              <li><a href="#Statistical Misconceptions and Misuses">Statistical Misconceptions and Misuses <span class="badge">New</span></a></li>
                            </ol>
                         </td>
                      </tr>
@@ -212,30 +212,30 @@
                         <a href="Music.html#Music%20and%20Mathematics">Check Music Section</a>
                      </div>
                      <div id="Mathematics and Art"></div>
-                     <h2 class="MathTopic collapsible">viii. Mathematics and Art<span class="badge">New</span></h2>
+                     <h2 class="MathTopic collapsible">viii. Mathematics and Art <span class="badge">New</span></h2>
                      <div class="Collapse-content">
                         <h4>The golden ratio </h4>
                         <p>The <b>golden ratio</b>, also known as the divine proportion, in simple terms, is a ratio between 2 numbers which is an irrational number approximately equal to 1.618, denoted by \(\phi\).  But where does the number 1.618 come from? </p>
                         <figure>
                            <img src="./Files/Misc/Golden ratio-1.png" style="width:50%" /> 
                         </figure>
-                        <p>Suppose we have a rectangle with dimensions \((a+b)\times a\), then we draw another rectangle of the same proportion and same length as the previous rectangle inside said rectangle, then we have another rectangle of dimensions  \(a\times a\) We can keep repeating the process to infinity, but for now let’s focus on the first 2 rectangles. The ratios of the 2 rectangles will be:
+                        <p>Suppose we have a rectangle with dimensions \((a+b)\times a\), then we draw another rectangle of the same proportion and same length as the previous rectangle inside said rectangle, then we have another rectangle of dimensions  \(a\times a\), We can keep repeating the process to infinity, but for now let’s focus on the first 2 rectangles. The ratios of the 2 rectangles will be:
                            $${{a+b}\over a}={{a}\over b}=\phi$$
                            $$1+{{a}\over b}=1+{{1}\over \phi}$$
                            $$1+{{1}\over \phi}=\phi$$
                            $$\therefore \phi^2-\phi-1=0$$
                            and using the quadratic equation we get: \(\phi\)=\({1+\sqrt{5} }\over 2\)=\(1.6180339887...\)
                         </p>
-                        <h4>Relationship between the Fibonacci and the Golden ratio.</h4>
+                        <h4><u>Relationship between the Fibonacci and the Golden ratio.</u></h4>
                         <p>Before we get into the relationship between the Fibonacci sequence and the Golden ratio, let's talk about the Fibonacci sequence. What is the Fibonacci sequence? </p>
-                        <p>The Fibonacci sequence is a recursive sequence where each number is the sum of the two previous numbers in the series. For example, look at the first 10 terms of the sequence: $$ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34... $$
+                        <p>The <b>Fibonacci sequence</b> is a recursive sequence where each number is the sum of the two previous numbers in the series. For example, look at the first 10 terms of the sequence: $$ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34... $$
                            Notice how 8=5+3(the 2 numbers before 8),13=8+5(the 2 numbers before13) and so on. This can be mathematically recursively defined as:
                            $$ F_0=0\\ F_1=1\\ F_{n}=F_{n-1}+F_{n-2}\ (where\ n\ \in\mathbb{N} ,n\geq2)$$
                            and also, non-recursively defined as
                            $$F(n) = { 1\over {\sqrt5}}\Biggr[({1+\sqrt{5} \over 2})^n-({1-\sqrt{5} \over 2})^n\Biggr](where\ n\ \in\mathbb{N})$$
                            The second formula is obtained by applying the first formula in conjunction with the power series and performing some algebraic manipulations, which I will not elaborate on here. Back to the first 10 terms of the Fibonacci shown above, notice how \(13 \over8\)=1.625, \(21 \over13\)=1.615, and \(34 \over21\)=1.619? The ratios between the 2 consecutive numbers of the Fibonacci sequence converge to the golden ratio \(\phi\) the bigger the Fibonacci sequence grows in mathematical terms:  $$ \lim_{n \to \infty}{F_{n}\over F_{n-1}}= { {1+\sqrt{5} }\over 2}=1.6180339887...$$
                         </p>
-                        <h4>The golden ratio and beauty:</h4>
+                        <h4><u>The golden ratio and beauty:</u></h4>
                         <p>The golden ratio has been observed to appear in numerous places in nature and is considered visually pleasing by many. As a result, artists over the years have sought to incorporate this beauty by applying the golden ratio in their artworks.</p>
                         <!-- Image slides Golden ratio -->
                         <div class="js-slider">
@@ -254,7 +254,6 @@
                            <button class="next">&#10095;</button>
                         </div>
                         <!-- Image slides end -->
-                        <b>Arts</b>
                         <div id="My Graph Art"></div>
                         <h2 class="MathTopic">My Graph Art</h2>
                         <p>These are some of the artworks I’ve made using the online graphing calculator <a href=” https://www.desmos.com/calculator”>Desmos</a>. Not the greatest pieces of Desmos art ever created, but I had a lot of fun making them and I am very proud of them. </p>
@@ -330,176 +329,500 @@
                         <p>...</p>
                      </div>
                      <div id="Statistical Misconceptions and Misuses"></div>
-                     <h2 class="MathTopic collapsible">Statistical Misconceptions and Misuses<span class="badge">New</span></h2>
+                     <h2 class="MathTopic collapsible">Statistical Misconceptions and Misuses <span class="badge">New</span></h2>
                      <div class="Collapse-content">
+                        <h2><u>Statistical Misconceptions</u></h2>
                         <p>
-                           Statistics has been the backbone of decision-making throughout history, not
+                           Statistics has been the backbone of decision-making throughout history, not used
                            only by governments, research facilities, and big corporations, but also by
-                           us as individuals.  Before you buy a product, things like the ratings of the
-                           product on the internet and phrases like "Recommended by 99% of experts” can
+                           us as individuals.  Before you buy a product, statistics like the rating of the
+                           product on the internet and phrases like <em>"Recommended by 90% of experts”</em> can
                            sway your decision to buy the product. Before you choose which university to
-                           go to, statistics like “100% of people who graduate from this institution
-                           are employed,” and “there is a 60% chance of finishing this degree”, also
-                           influence your decision. But in many cases, phrases like these are usually
-                           misleading at best and outright false at worst, as such, it is very crucial
-                           to understand the statistical fallacies we as people are prone to fall for.
+                           go to, statistics like <em>“100% of people who graduate from this institution
+                           are employed”</em>, and <em>“there is only 50% chance of completing this degree in record time”</em>, can also
+                           influence your decision. But in many cases, phrases like these, when looked at face value, can be
+                           misleading at best and outright false at worst. As such, it is very crucial
+                           to understand the statistical traps we as people are prone to fall for.
                            Interpreting data and statistics accurately is the first step towards making
-                           informed decisions. In this section, we will discuss 10 statistical
-                           fallacies people are prone to fall for.
+                           informed decisions. In this section, we will discuss 12 of those statistical
+                           traps. 
                         </p>
-                        <h4>
-                           1.  False Causality Fallacies
-                        </h4>
+                        <hr>
+                        <h2>
+                           <u>1.  Correlation ≠ Causation</u>
+                        </h2>
                         <p>
-                           A false cause fallacy occurs when someone falsely assumes that one thing
-                           caused another. The fallacy comes in many different forms, most notable ones
-                           being: Post Hoc Ergo Propter Hoc, Cum Hoc Ergo Propter Hoc and Non causa pro
-                           causa
-                        </p>
-                        <p>
-                           Examples:
-                        </p>
-                        <p>
-                           1. <strong>Post Hoc Ergo Propter Hoc</strong>. - “after this, therefore
-                           because of this.”- Concluding one event caused the other because one
-                           occurred after the other.
-                        </p>
-                        <p>
-                           <em>
-                           Example: Phuluso buys a new study guide and gets better grades;
-                           therefore, buying the new study guide makes you get better grades.
-                           </em>
-                        </p>
-                        <p>
-                           2. <strong>Cum Hoc Ergo Propter Hoc</strong>. - “with this, therefore
-                           because of this.”- Concluding one event caused the other because they occur
-                           at the same time
-                        </p>
-                        <p>
-                           <em>
-                           Example: Phuluso listens to classical music while studying and gets good
-                           grades; therefore, listening to music while studying gets you better
-                           grades.
-                           </em>
-                        </p>
-                        <p>
-                           <em>3.</em> <strong>Non causa pro causa</strong> - Latin for "not the cause
-                           for the cause."- Concluding one event caused the other using insufficient
-                           evidence. <em></em>
-                        </p>
-                        <p>
-                           <em>
-                           Example: Phuluso has a medical aid, and he is always sick. Therefore,
-                           the medical aid is making him sick.
-                           </em>
-                        </p>
-                        <h4>
-                           2.  Correlation ≠ Causation
-                        </h4>
-                        <p>
-                           Correlation shows how strongly related 2 variables are; in statistics, it is
-                           expressed numerically by the correlation coefficient. A positive correlation
-                           means that 2 variables increase and decrease at the same time, and a
+                           <b> Correlation</b> shows how strongly related 2 values are; in statistics, it is
+                           expressed numerically by the <b>correlation coefficient(r)</b>. A positive correlation
+                           means that 2 values increase and decrease at the same time, and a
                            negative correlation means that when one variable is increasing, the other
                            is decreasing and vice versa. However, just because 2 events are correlated,
-                           doesn’t mean one caused the other. [correlation picture x 2]
+                           doesn’t mean one caused the other.
                         </p>
-                        <p>
-                           Example:
-                        </p>
-                        <p>
-                           <em>
-                           One famous example is the positive correlation between ice cream sales
-                           and shark attacks. When ice cream sales are high, so are the shark
-                           attacks. But ice cream isn't the cause of sharks attacking people, or
-                           vice versa, a more rational conclusion would be that its’s because more
-                           people buy ice cream, and more people go to the beach when it’s hot.
-                           </em>
-                        </p>
-                        <p>
-                           <a href="https://www.tylervigen.com/spurious-correlations">
-                           https://www.tylervigen.com/spurious-correlations
-                           </a>
-                        </p>
-                        <h4>
-                           3.  Survivorship Bias
-                        </h4>
-                        <p>
-                           Survivorship bias is when we only assess the successful visible subgroup as
-                           the entire group.
-                        </p>
-                        <p>
-                           Examples:
-                        </p>
-                        <p>
-                           ·       A famous example is from WW2 when a military research group was
-                           trying to figure out the locations to reinforce bomber planes for better
-                           protection, the first idea was to reinforce it based on the locations that
-                           the returning planes suffered the most damage, Abraham Wald, a famous
-                           statistician, noted that the most severely damaged planes were actually the
-                           ones that did not return. And that the locations on the returned planes were
-                           spots in which aircraft could sustain many bullet holes and still return,
-                           while the planes that sustained enemy fire in other locations were the ones
-                           that went down
-                        </p>
-                        <p>
-                           ·       When people see old buildings that are still standing and conclude
-                           that people in the past were much better at architecture, while they’re just
-                           a few of the ones still standing out of many that were built.
-                        </p>
-                        <p>
-                           ·       When we conclude that a certain career path is the best choice after
-                           seeing the successful people in that field and ignoring the thousands of
-                           others who failed.
-                        </p>
-                        <h4>
-                           4.  Sampling Bias or Selection Bias
-                        </h4>
+                        <div class="row">
+                           <div class="col-6 col-12-small">
+                              <img src="./Files/Graphs/Graph24-No correlation.png" style="width:70%">
+                           </div>
+                           <div class="col-6 col-12-small">
+                              <img src="./Files/Graphs/Graph24-Positive correlation.png" style="width:70%">
+                           </div>
+                        </div>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    One famous example is the positive correlation between ice cream sales and shark attacks. When ice cream sales are high, so are the shark attacks. But ice cream isn't the cause of sharks attacking people, or vice versa, a more rational conclusion would be that it’s because more people buy ice cream, and more people go to the beach when it’s hot.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2>
+                           <u>2.  Sampling Bias or Selection Bias</u>
+                        </h2>
                         <p>
                            <strong>
-                           Sampling is the process of selecting a smaller group as a representation
+                           Sampling</strong>is the process of selecting a smaller group as a representation
                            of a larger group
-                           </strong>
                            . This makes gathering data and making inferences about an entire group a
                            lot simpler.
                            <strong>
-                           Sampling bias, on the other hand, occurs when certain members of the
+                           Sampling bias</strong>, on the other hand, occurs when certain members of the
                            group are more likely to be selected than others
-                           </strong>
                            . This often leads to false inferences about the larger group due to the
                            data being unfairly skewed.
                         </p>
                         <p>
-                           Things that lead to sampling bias include when researchers use their
+                           What leads to sampling bias is when researchers use their
                            judgment to select participants, when researchers select individuals or
                            elements that are easiest to access or reach, flawed random selection
                            methods, and when people with specific characteristics are more likely to
                            agree to take part in a study than others.
                         </p>
-                        <p>
-                           Example:
-                        </p>
-                        <p>
-                           <em>
-                           A One Piece social media fan page is doing a survey on what people think
-                           is the greatest manga, and the results come out as 99% for One Piece.
-                           Though One Piece is indeed the greatest, this is a form of sampling bias
-                           because the page is followed by mostly One Piece fans.
-                           </em>
-                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    A One Piece social media fan page is doing a survey on what people think
+                                    is the greatest manga, and the results come out as 99% for One Piece.
+                                    Though One Piece is indeed the greatest, this is a form of sampling bias
+                                    because the page is followed by mostly One Piece fans.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
                         <p>
                            Sampling bias teaches how important it is to consider how a study was
                            conducted and not just go with the percentage numbers alone.
                         </p>
+                        <hr>
+                        <h2>
+                           <u>3.  Survivorship Bias</u>
+                        </h2>
+                        <p>
+                           <b>Survivorship bias</b> is when we only assess the successful visible subgroup as
+                           the entire group.
+                        </p>
+                        <hr>
+                        <div class="row">
+                           <div class="col-6 col-12-small">
+                              <h2><em style="color: crimson;">Example 1</em></h2>
+                              <p>
+                                 A famous example is from WW2 when a military research group was
+                                 trying to figure out the locations to reinforce bomber planes for better
+                                 protection, the first idea was to reinforce it based on the locations that
+                                 the returning planes suffered the most damage, Abraham Wald, a famous
+                                 statistician, noted that the most severely damaged planes were actually the
+                                 ones that did not return. And that the locations on the returned planes were
+                                 spots in which aircraft could sustain many bullet holes and still return,
+                                 while the planes that sustained enemy fire in other locations were the ones
+                                 that went down
+                              </p>
+                           </div>
+                           <div class="col-6 col-12-small">
+                              <img src="./Files/Misc/Survivorship-bias.png" style="width:70%">
+                              <figcaption>(image source: https://en.wikipedia.org/wiki/Survivorship_bias)</figcaption>
+                           </div>
+                        </div>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 2</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    When people see old buildings that are still standing and conclude
+                                    that people in the past were much better at architecture, while in reality, they’re just
+                                    a few of the ones still standing out of many that were built.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 3</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    When we conclude that a certain career path is the best choice after
+                                    seeing the successful people in that field and ignoring the thousands of
+                                    others who failed.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        </p>
+                        <hr>
+                        <h2>
+                           <u>4.  False Causality Fallacies</u>
+                        </h2>
+                        <p>
+                           A <b>false cause fallacy</b> occurs when someone falsely assumes that one thing
+                           caused another. The fallacy comes in many different forms, most notable ones
+                           being: <b>Post Hoc Ergo Propter Hoc</b>, <b>Cum Hoc Ergo Propter Hoc</b> and <b>Non causa pro
+                           causa</b>
+                        </p>
+                        <h3>
+                           <u> Examples:</u>
+                        </h3>
+                        <div class="row">
+                           <div class="col-4">
+                              <p>
+                                 1. <strong>Post Hoc Ergo Propter Hoc</strong>, Latin for “after this, therefore
+                                 because of this.”- Concluding one event caused the other because one
+                                 occurred after the other.
+                              </p>
+                              <h5 style="color: crimson;" >Example 1:</h5>
+                              <em>
+                              Phuluso buys a new study guide and gets better grades;
+                              therefore, buying the new study guide makes you get better grades.
+                              </em>
+                              </p>
+                           </div>
+                           <div class="col-4">
+                              <p>
+                                 2. <strong>Cum Hoc Ergo Propter Hoc</strong>, Latin for “with this, therefore
+                                 because of this.”- Concluding one event caused the other because they occur
+                                 at the same time
+                              </p>
+                              <h5 style="color: crimson;" >Example 1:</h5>
+                              <em>
+                              Phuluso listens to classical music while studying and gets good
+                              grades; therefore, listening to classical music while studying gets you better
+                              grades.
+                              </em>
+                              </p>
+                           </div>
+                           <div class="col-4">
+                              <p>
+                                 <strong>Non causa pro causa</strong>, Latin for "not the cause
+                                 for the cause."- Concluding one event caused the other using insufficient
+                                 evidence. <em></em>
+                              </p>
+                              <h5 style="color: crimson;" >Example 1:</h5>
+                              <em>
+                              Phuluso has a medical aid, and he is always sick. Therefore,
+                              the medical aid is making him sick.
+                              </em>
+                              </p>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2><u>5. Will Rogers paradox</u>
+                        </h2>
+                        <p>
+                           <b>Will Rogers paradox</b> occurs When moving a data point from group 1 to group 2 raises the average of both groups.
+                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    The poorest person in a rich country moves to a poor country where they’re
+                                    now the richest in that country. The average of the rich country will go up
+                                    because it lost a poor person in comparison, but the poor country’s average will also go
+                                    up, because it gained a rich person in comparison. Both countries on average got richer, though no real improvement was actually made.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <h2>
+                        <h2>
+                           <u>6.  Regression Toward the Mean</u>
+                        </h2>
+                        <p>
+                           <b>Regression toward the mean</b> is a statistical phenomenon that, if one variable
+                           is very high or very low on the first measurement, then it will tend toward
+                           the mean on its second measurement. Regression toward the mean is possible
+                           due to randomness. When you get an outlier when measuring a variable, it is
+                           often because other one time random events were also at play, events that
+                           will not be at play when you measure the variable again. Hence, it will
+                           return closer to the mean.
+                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 1</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    If a runner finishes a marathon in record time, in their
+                                    next marathon, they’re likely going to finish in a longer time, a time that
+                                    is closer to their average time. This is because peak performance is
+                                    influenced by a variety of factors, including random factors that are
+                                    not always present like luck. It’s possible they achieved the record
+                                    because they had a well-rested sleep, ate the perfect breakfast, did not
+                                    have any stress that would affect their performance, the wind was in
+                                    their favour, etc.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 2</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    If student gets a very high score on a Math test, in their next Math test, they
+                                    will likely get a lower score, closer to their average, even if they
+                                    studied just as much as before, but because of reasons like, the chapters they studied were not on
+                                    the test, they didn't have enough sleep, they were stressed when writing
+                                    and other things outside their control.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
                         <h4>
-                           5.  Gambler's Fallacy
+                           <u><strong>Regression toward the mean fallacy</strong></u>
                         </h4>
                         <p>
-                           Suppose you have 10 blue balls and 5 red balls in a bag, without looking
+                           <b>Regression toward the mean fallacy</b> occurs when people attribute different
+                           reasons to things that happened due to a normal regression towards the mean. For example,         
+                           The same student who got a high score on the previous test scored lower.
+                           the teacher might say it’s because the student did not study as much,
+                           when they did, just that odds were not in their favour this time around.
+                           or people might claim the athlete who finished in record-breaking time
+                           got arrogant and did worse in the next round, when that's  also not the
+                           case.
+                        </p>
+                        <p>
+                           Such false attributions can lead to unnecessary policy or businesses model
+                           changes when companies and states don’t take Regression toward the mean into
+                           account when making statistical based decisions.
+                        </p>
+                        <hr>
+                        <h2>
+                           <u>7.  Hawthorne Effect or participant reactivity</u>
+                        </h2>
+                        <p>
+                           Coined from a Harvard study conducted in 1924-1932, <b>The Hawthorne effect</b> is
+                           a phenomenon where people act differently when they are aware that they are
+                           being observed. As such the observed behaviour may not represent the normal
+                           behaviour leading to wrong conclusions when conducting experiments.
+                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 1</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    If you are conducting a study on whether workers are more productive in
+                                    a cold or hot environment, chances are if workers know they are being
+                                    studied, they will work hard in both environments out of fear of
+                                    appearing lazy.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2>
+                           <u>8.Simpson's Paradox</u>
+                        </h2>
+                        <p>
+                           <b>Simpson's paradox</b> occurs when groups of data show one trend, but this trend
+                           is reversed when the groups are combined.
+                        </p>
+                        <image src="./Files/Graphs/Graph25-Simpsons paradox.png" style="width:70%"></image>
+                        <hr>
+                        <h2><em style="color: crimson;">Example</em></h2>
+                        <!-- Table Start -->
+                        <table style="width: 60%;">
+                           <tbody>
+                              <tr>
+                                 <th><br></th>
+                                 <td style="color: green;">
+                                    <p>Male</p>
+                                 </td>
+                                 <td style="color: green;">
+                                    <p>Female</p>
+                                 </td>
+                                 <td>
+                                    <p style="color: green;">Acceptance per course</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="color: red;">
+                                    <p>Course 1</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{1712}{2744} = 62\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{468}{588} = 80\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{2180}{3332} = 65\%\)</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="color: red;">
+                                    <p>Course 2</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{676}{2638} = 26\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{820}{3082} = 27\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{1496}{5720} = 26\%\)</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="color: black;">
+                                    <p>Acceptance per gender</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{2388}{5382} = 44\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p>\(\frac{1288}{3670} = 35\%\)</p>
+                                 </td>
+                                 <td>
+                                    <p></p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <!-- Table End -->
+                        <p>
+                           Look at the diagram above. The total application acceptance of men is 44%,
+                           which is higher than the respective 35% for women. However, if we break
+                           things down by each course, you'll find that women scored higher than men in
+                           each course, 80% and 27% vs 62% and 26% for Courses 1 and 2 respectively.
+                           This is what is known as the <b>Simpson's paradox</b>, the skew is caused by the
+                           fact that more women applied a highly competitive course with
+                           with low acceptance rates for everyone. This is based on the UC
+                           Berkeley Gender Bias controversy (1973) where the university was accused of gender bias
+                           until the data was broken down by departments.
+                        </p>
+                        <p>
+                           The Simpson's Paradox teaches us to look at data from every angle before
+                           making conclusions.
+                        </p>
+                        <h2>
+                           <u>9.  McNamara Fallacy</u>
+                        </h2>
+                        <p>
+                           <b>The McNamara Fallacy</b> happends when you only focus on factors that can be numerically represented or measured, <b>quantitative
+                           factors</b>, while ignoring <b>qualitative factors</b>, those that can not be accurately numerically represented or measured, which in many cases are just as
+                           important, if not more. Named after U.S. Secretary of Defence Robert McNamara, who
+                           relied heavily on easily quantifiable metrics, like enemy body counts, to
+                           measure success during Vietnam War(1955-1975), ignoring crucial
+                           unquantifiable factors like the morale of the Vietnamese people and the
+                           political instability within the U.S., leading to a strategic failure
+                           despite having the US having overall higher metrics in many categories.
+                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 1</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    An ad campaign using the quantifiable number of YouTube video clicks to
+                                    measure the success of an add without taking into consideration that they
+                                    probably clicked it by mistake or how annoying the ad is to the customers
+                                    and is damaging brand reputation.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example 2</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    <em>
+                                    Assessing a country’s prosperity by looking at Gross Domestic Product (GDP)
+                                    alone without taking into consideration the income distribution and overall
+                                    wellbeing of the individual citizens.
+                                    </em>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2>
+                           <u>10. Base rate fallacy(base rate neglect)</u>
+                        </h2>
+                        <p>
+                           <strong>
+                           The Base rate fallacy</strong> Is a statistical fallacy where people ignore the base rate or original
+                           probability
+                           when making judgements about the likelihood of an event.it stems from
+                           failure to apply <b>Bayes theorem</b>, a probability theorem which discribes the probability of an event based on conditions that are related to the event. \(P(A \mid B) = \frac{P(B \mid
+                           A)\,P(A)}{P(B)}\). 
+                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    Suppose there are 100 students in a class, and 10 of them drink a Red Bull energy drink before studying for an exam. If you see a student pulling an all-nighter and assume they must be one of the Redbull drinkers, then you have fallen for the base rate fallacy. Even if Red Bull drinkers are more likely to study all night, there are far more students who don’t drink it, so most all-nighters will still most likely come from the non-Red Bull drinking group.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2>
+                           <u>11.  Gambler's Fallacy</u>
+                        </h2>
+                        <p>
+                           Suppose you have <b style="color: blue;">10 blue balls</b> and <b style="color: red;">5 red balls</b> in a bag, without looking
                            inside the bag, what is the probability of reaching inside and taking out a
-                           red ball? it’s \(5\over 15\) =33.33% because there are 5 red balls and a
-                           total of 15 balls. Now suppose you do take out the red ball, and now there
-                           are 4 red balls. Now what is the probability of taking out the red ball
+                           red ball? it’s \(5\over 15\) =33.33% because there are <b style="color: red;">5 red balls</b> and a
+                           total of 15 balls. Now suppose you do take out the <b style="color: red;">red ball</b>, and now there
+                           are <b style="color: red;">4 red balls</b>. Now what is the probability of taking out the red ball
                            again?  \(5\over 15\)=26.66%, there is now a lower probability compared to
                            the first attempt. This is because the first and second events of taking the
                            ball out of the bag are dependent on each other; in probability, these are
@@ -516,316 +839,51 @@
                            of each other, even if you flip the coin 10 times and get heads, the
                            probability of getting heads the next time you flip is still the same.
                         </p>
-                        <p>
-                           Gambler's Fallacy
-                        </p>
+                        <h4>
+                           <u>Gambler's Fallacy</u>
+                        </h4>
                         <p>
                            The Gambler's fallacy is the belief that because something has happened more
                            frequently than usual, it’s now likely to happen in the future, and vice
                            versa. This stems from confusing independent events with dependent events.
                         </p>
-                        <p>
-                           <em>Example</em>
-                        </p>
-                        <p>
-                           <em>
-                           Suppose you flip the coin 50 times and it lands on head, the next time
-                           you flip it you will more than likely expect it to be Tails again, even
-                           though the probability is still the same.
-                           </em>
-                        </p>
-                        <h4>
-                           6.  Regression Toward the Mean
-                        </h4>
-                        <p>
-                           Regression toward the mean is a statistical phenomenon that, if one variable
-                           is very high or very low on the first measurement, then it will tend toward
-                           the mean on its second measurement. Regression toward the mean is possible
-                           due to randomness. When you get an outlier when measuring a variable, it is
-                           often because other one time random events were also at play, events that
-                           will not be at play when you measure the variable again. Hence, it will
-                           return closer to the mean. [insert pic]
-                        </p>
-                        <p>
-                           <em>Example:</em>
-                        </p>
-                        <p>
-                           <em>
-                           If a runner finishes a 10km marathon in a record time of 26:24, in their
-                           next 10km marathon, they’re likely going to finish in a longer time that
-                           is close to their average time. This is because peak performance is
-                           influenced by a variety of factors, including random factors that are
-                           not always present like luck. It’s possible they achieved the record
-                           because they had a well-rested sleep, ate the perfect breakfast, did not
-                           have any stress that would affect their performance, the wind was in
-                           their favour, etc.
-                           </em>
-                        </p>
-                        <p>
-                           <em>
-                           If student gets a very high score on a test, in their next test, they
-                           will likely get a lower score, closer to their average, even if they
-                           studied, because of reasons like, the chapters they studied were not on
-                           the test, they didn't have enough sleep, they were stressed when writing
-                           and other things outside their control.
-                           </em>
-                        </p>
-                        <p>
-                           <strong>Regression toward the mean fallacy</strong>
-                        </p>
-                        <p>
-                           Regression toward the mean fallacy occurs when people attribute different
-                           reasons to things that happened due to a normal regression towards the mean.
-                        </p>
-                        <p>
-                           <em>example:</em>
-                        </p>
-                        <p>
-                           <em>
-                           The same student who got a high score on the previous test scored lower.
-                           The teacher might say it’s because the student did not study as much,
-                           when they did, just that odds were not in their favour this time around.
-                           or people might claim the athlete who finished in record-breaking time
-                           got arrogant and did worse in the next round, when that was also not the
-                           case.
-                           </em>
-                        </p>
-                        <p>
-                           Such false attributions can lead to unnecessary policy or businesses model
-                           changes when companies and states don’t take Regression toward the mean into
-                           account when making statistical based decisions.
-                        </p>
-                        <p>
-                           <em></em>
-                        </p>
-                        <h4>
-                           7.  Hawthorne Effect or participant reactivity
-                        </h4>
-                        <p>
-                           Coined from a Harvard study conducted in 1924-1932, The Hawthorne effect is
-                           a phenomenon where people act differently when they are aware that they are
-                           being observed. As such the observed behaviour may not represent the normal
-                           behaviour leading to wrong conclusions when doing studies
-                        </p>
-                        <p>
-                           <em>Example:</em>
-                        </p>
-                        <p>
-                           <em>
-                           if you are conducting a study on whether workers are more productive in
-                           a cold or hot environment, chances are if workers know they are being
-                           studied, they will work hard in both environments out of fear of
-                           appearing lazy.
-                           </em>
-                        </p>
-                        <h4>
-                           8.  Simpson's Paradox
-                        </h4>
-                        <p>
-                           Simpson's paradox occurs when groups of data show one trend, but this trend
-                           is reversed when the groups are combined.
-                        </p>
-                        <p>
-                           Example:
-                        </p>
-                        <p>
-                           Education and Admissions
-                        </p>
-                        <p>
-                           Application success rate
-                        </p>
-                        <table border="1" cellspacing="0" cellpadding="0">
-                           <tbody>
-                              <tr>
-                                 <td width="200" valign="top">
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       <strong>Male</strong>
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       <strong>Female</strong>
-                                    </p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       Course   1
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       856/1372=62%|
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       234/294=80%
-                                    </p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       Course   2
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       338/1319=26%
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       408/1541=27%
-                                    </p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       <strong>Total</strong>
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       1194/2691=28%|
-                                    </p>
-                                 </td>
-                                 <td width="200" valign="top">
-                                    <p>
-                                       642/1835=19%
-                                    </p>
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        <p>
-                           Look at the graph above. The total application acceptance of men is 43%,
-                           which is higher than the respective 35% for women. However, if we break
-                           things down by each course, you'll find that women scored higher than men in
-                           each subject, 80% and 27% vs 62% and 26% for Courses 1 and 2 respectively.
-                           This is what is known as the Simpson's paradox, the skew is caused by the
-                           fact that women had applied to highly competitive departments in high
-                           numbers with high acceptance rates for everyone. This is based on the UC
-                           Berkeley Gender Bias (1973) where the university was accused of gender bias
-                           until the data was broken down by departments.
-                        </p>
-                        <p>
-                           Another example is from the COVID-19 pandemic, during the early stages of
-                           the pandemic, Italy had more deaths due to covid than China. But when the
-                           data was broken down by age it was found that China had higher covid death
-                           rates than italy in every age group. But because Italy had much older
-                           population…
-                        </p>
-                        <p>
-                           The Simpson's Paradox teaches us to look at data from every angle before
-                           making conclusions.
-                        </p>
-                        <h4>
-                           9.  McNamara Fallacy
-                        </h4>
-                        <p>
-                           Happens when you only focus on factors that can be measured, quantitative
-                           factors, while ignoring qualitative factors which in many cases are just as
-                           important, if not more.
-                        </p>
-                        <p>
-                           Example
-                        </p>
-                        <p>
-                           U.S. Secretary of Defence Robert McNamara, who the fallacy is named after,
-                           relied heavily on easily quantifiable metrics, like enemy body counts, to
-                           measure success during Vietnam War(1955-1975), ignoring crucial
-                           unquantifiable  factors like the morale of the Vietnamese people and the
-                           political instability within the U.S., leading to a strategic failure
-                           despite having the US having higher overall metrics.
-                        </p>
-                        <p>
-                           <strong></strong>
-                        </p>
-                        <p>
-                           Example:
-                        </p>
-                        <p>
-                           An ad campaign using the quantifiable number of YouTube video clicks to
-                           measure the success of an add without taking into consideration that they
-                           probably clicked it by mistake or how annoying the ad is to the customers
-                           and is damaging brand reputation.
-                        </p>
-                        <p>
-                           Example
-                        </p>
-                        <p>
-                           Assessing a country’s prosperity by looking at Gross Domestic Product (GDP)
-                           alone without taking into consideration the income distribution and overall
-                           wellbeing of the individual citizens.
-                        </p>
-                        <p>
-                           <strong>.</strong>
-                        </p>
-                        <p>
-                           <strong></strong>
-                        </p>
-                        <p>
-                           10.      Base rate fallacy/base rate neglect
-                        </p>
-                        <p>
-                           <strong>
-                           Is a statistical fallacy where people ignore the base rate or original
-                           probability
-                           </strong>
-                           when making judgements about the likelihood of an event.it stems from
-                           failure to apply bayes theorem. \(P(A \mid B) = \frac{P(B \mid
-                           A)\,P(A)}{P(B)}\)
-                        </p>
-                        <p>
-                           A tech company states their new product is made with "50% more recycled
-                           material" than last year. If the original product only used 12% recycled
-                           material, a 50% increase only brings the new total to 18% (a jump of 6
-                           percentage points
-                        </p>
-                        <p>
-                           You meet someone tall and assume they are a basketball player, but there are
-                           more tall people than there are basketball players <strong>.</strong>
-                        </p>
-                        <p>
-                           <strong> <br/>
-                           <br/>
-                           11.</strong>Will Rogers paradox
-                        </p>
-                        <p>
-                           When moving data from 1 group to another raises the average of both groups.
-                        </p>
-                        <p>
-                           Example
-                        </p>
-                        <p>
-                           The poorest person in a rich country moves to a poor country where they’re
-                           now the richest in that country. The average of the rich country will go up
-                           because it lost a rich person, and the poor country’s average will also go
-                           up, because gained a rich person.
-                        </p>
-                        <p>
-                           <strong></strong>
-                        </p>
-                        <p>
-                           <strong></strong>
-                        </p>
-                        <p>
-                           11.      Multiple comparisons fallacy (multiple testing problem)
-                        </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    Suppose you flip the coin 50 times and it lands on Head, the next time
+                                    you flip it you will more than likely expect it to be Tails again, even
+                                    though the probability is still the same.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                        <h2><u>12. Multiple comparisons fallacy (multiple testing problem)</u>
+                        </h2>
                         <p>
                            Every statistical test or experiment is likely going to contain some error
                            or unexpected finding because nothing is perfect, as such the more you make
-                           conduct tests the more errors you’re likely going to run into. The multiple
-                           comparisons fallacy occurs when researchers take such errors to be
+                           conduct tests the more errors you’re likely going to run into. <b>The multiple
+                           comparisons fallacy</b> occurs when researchers take such errors to be
                            significant findings even though they appeared by chance and are very few
                            compared to the rest of the findings
                         </p>
+                        <div class="flip-card">
+                           <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                 <h1><em style="color: crimson;">Example</em></h1>
+                              </div>
+                              <div class="flip-card-back">
+                                 <p>
+                                    Suppose you run 20 different tests to determine whether a lotion is effective. By chance alone, one person’s condition improves, and you then claim the lotion is effective. This is the multiple comparisons fallacy, because when many tests are performed, some positive or negative results are expected to occur purely by chance.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                </section>
             </div>
