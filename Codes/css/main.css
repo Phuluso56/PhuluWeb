@@ -2539,3 +2539,63 @@ img {
 
 .js-slider .prev { left: 10px; }
 .js-slider .next { right: 10px; }
+
+
+
+/* Flip-card */
+
+
+.flip-card {
+  width: 300px;
+  perspective: 1000px;
+  margin: 40px;
+}
+
+/* Inner container */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & back overlay each other */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Front */
+.flip-card-front {
+  background: rgb(177, 255, 177) ;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+/* Back */
+.flip-card-back {
+  background: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Height stabilizer */
+.flip-card-inner::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* default square */
+}
