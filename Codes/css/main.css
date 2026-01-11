@@ -2437,6 +2437,7 @@ img {
   background-color: royalblue  ;
   color: white;
   cursor: pointer;
+  padding: 1px;
   width: 100%;
   border: none;
   text-align: left;
@@ -2484,9 +2485,9 @@ img {
 
 
 .js-slider {
-  width: 80%;
+  width: 100%;
   max-width: 800px;
-  height: 450px;
+  height: 600px;
   margin: 50px auto;
   position: relative;
   overflow: hidden;
@@ -2545,9 +2546,10 @@ img {
 
 
 .flip-card {
-  width: 90%;
+  width: 50%;          
+  max-width: 400px;    /* Prevents it from getting too big on PC */
   perspective: 1000px;
-  margin: 40px;
+  margin: 40px left;   /* "auto" centers the card on the page */
 }
 
 /* Inner container */
@@ -2590,6 +2592,8 @@ img {
   background: #2980b9;
   color: white;
   transform: rotateY(180deg);
+  overflow: hidden;
+  word-wrap: break-word
 }
 
 /* Height stabilizer */
