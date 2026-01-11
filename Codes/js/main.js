@@ -312,6 +312,34 @@ document.querySelectorAll('.js-slider').forEach(slider => {
 
 
 
+//Flip Card
+
+function fitText() {
+    const cards = document.querySelectorAll('.flip-card-back');
+
+    cards.forEach(card => {
+        const textContainer = card.querySelector('p');
+        if (!textContainer) return;
+
+        let fontSize = 20; // Starting font size in pixels
+        textContainer.style.fontSize = fontSize + "px";
+
+        // Reduce font size until the text fits inside the card's height
+        // (subtracting padding to be safe)
+        while (textContainer.scrollHeight > (card.clientHeight - 40) && fontSize > 10) {
+            fontSize--;
+            textContainer.style.fontSize = fontSize + "px";
+        }
+    });
+}
+
+// Run the function when the page loads
+window.addEventListener('load', fitText);
+// Run the function again if the window is resized
+window.addEventListener('resize', fitText);
+
+
+
 
 //Dark Mode
 function DarkMode() {
