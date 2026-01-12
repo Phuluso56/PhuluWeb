@@ -157,14 +157,17 @@ h2 {
   font-size: 1.75em; }
 /*Topic heading*/
 h2.MathTopic {
-  background:rgb(177, 255, 177)   }
+  background:rgb(177, 255, 177);
+  color: #000000;   }
 h2.MusicTopic {
-  background:royalblue   }
+  background:royalblue;
+  color: #000000;    }
 
 
 
 h2.Ecoh2 {
-  background:rgb(150, 255, 250)   }
+  background:rgb(150, 255, 250);
+  color: #000000;    }
 
   h2.Data {
     background:lightsalmon   }
