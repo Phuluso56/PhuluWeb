@@ -268,21 +268,64 @@
 document.addEventListener("DOMContentLoaded", function () {
   var coll = document.getElementsByClassName("collapsible");
 
+  // --- 1. The Toggle Function (No changes here, kept your fix) ---
+  function toggleContent(element) {
+    element.classList.toggle("active");
+    var content = element.nextElementSibling;
+
+    if (!content || !content.classList.contains("Collapse-content")) return;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.addEventListener('transitionend', function() {
+        if (content.style.maxHeight !== "0px" && element.classList.contains("active")) {
+          content.style.maxHeight = "none";
+        }
+      }, { once: true });
+    }
+  }
+
+  // --- 2. Standard Click Event ---
   for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-
-      var content = this.nextElementSibling;
-
-      if (!content || !content.classList.contains("Collapse-content")) return;
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+      toggleContent(this);
     });
   }
+
+  // --- 3. UNIVERSAL Link/Anchor Logic ---
+  function checkHash() {
+    var hash = decodeURIComponent(window.location.hash.substring(1));
+    if (hash) {
+      var target = document.getElementById(hash);
+      if (target) {
+        var header = null;
+
+        // Check 1: Is the header INSIDE the div? (Economics Structure)
+        header = target.querySelector(".collapsible");
+
+        // Check 2: If not inside, is it the NEXT element? (Psychology Structure)
+        if (!header) {
+          header = target.nextElementSibling;
+        }
+
+        // Trigger the opening logic if we found a valid collapsible header
+        if (header && header.classList.contains("collapsible")) {
+          if (!header.classList.contains("active")) {
+            toggleContent(header);
+          }
+          // Scroll with a tiny delay to ensure the content is there
+          setTimeout(function() {
+            header.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 50);
+        }
+      }
+    }
+  }
+
+  window.addEventListener("hashchange", checkHash);
+  setTimeout(checkHash, 500); 
 });
 
 
@@ -309,6 +352,12 @@ document.querySelectorAll('.js-slider').forEach(slider => {
     showSlide(index);
   });
 });
+
+
+
+//Automatically open Collapsible
+
+
 
 
 
