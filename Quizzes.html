@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <link rel="icon" href="./Files/Misc/Phuluweb_logo.ico">
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QS150JSKP"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         
+         function gtag(){dataLayer.push(arguments);}
+         
+         gtag('js', new Date());
+         
+         
+         
+         gtag('config', 'G-5QS150JSKP');
+         
+      </script>
+      <title>Quiz</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="Codes/css/main.css" />
+      <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+   </head>
+   <body class="is-preload">
+      <!-- Wrapper -->
+      <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+      <div class="inner">
+         <!-- Header -->
+         <header id="header">
+            <a href="Quizes.html" class="logo"><strong>Quiz </strong>Section &#9835;</a>
+            <button onclick="DarkMode()">Dark mode &#9789;</button>
+         </header>
+         <!-- Return to Top -->
+         <a id="return-to-top"><i class='fas'>&#xf062;</i></a>
+         <!-- Content -->
+         <section>
+            <header class="main">
+               <h1>Quiz Section &#9835;</h1>
+            </header>
+            <table style="width:50%">
+               <tr>
+                  <th>Contents </th>
+               </tr>
+               <tr>
+                  <td>
+                     <ol>
+                        <li><a href="#Quizes">Quizes</a></li>
+                     </ol>
+                  </td>
+               </tr>
+            </table>
+            <hr class="major" />
+            <div id="Quizes"></div>
+               <h2 >Quizes</h2>
+                  <div>
+                         <div id="quiz-menu">
+        <h1 class="mc_quiz">Select Your Quiz</h1>
+        <div class="menu-btn-container">
+            <button class="menu-btn" data-category="1">Quiz 1: Verbal</button>
+            <button class="menu-btn" data-category="2">Quiz 2: Non-Verbal</button>
+            <button class="menu-btn" data-category="3">Quiz 3: Written</button>
+            <button class="menu-btn" data-category="4">Quiz 4: General Knowledge</button>
+        </div>
+    </div>
+
+    <div class="quizArea" style="display: none;">
+        <div class="multipleChoiceQues">
+            <div class="my-progress">
+                <progress value="0" max="100"></progress>
+                <div class="my-progress-bar"></div>
+                <div class="js-my-progress-completion">0% complete</div>
+            </div>
+            <div class="quizBox">
+                <div class="question"></div>
+                <div class="answerOptions"></div>
+            </div>
+            <div class="buttonArea">
+                <button id="next" class="hidden">Next</button>
+                <button id="submit" class="hidden">Submit</button>
+            </div>
+        </div>
+
+        <div class="resultArea">
+            <div class="resultPage1">
+                <h1>Performance Scorecard</h1>
+                <div id="_cir_progress" class="briefchart">
+                    <svg width="300" height="300">
+                        <circle class="_cir_P_y" cx="150" cy="150" r="120" stroke="#968089" stroke-width="20" stroke-dasharray="0,764" fill="none"></circle>
+                        <text class="_cir_Per" x="50%" y="50%" text-anchor="middle" font-size="24" fill="#fff">0%</text>
+                    </svg>
+                    <div class="score-summary-text">
+                        <span class="_text_cor">Correct : 0</span> | 
+                        <span class="_text_incor">Incorrect : 0</span>
+                    </div>
+                </div>
+                <div class="resultBtns">
+                    <button class="viewchart">View Chart</button>
+                    <button class="viewanswer">View Answers</button>
+                    <button class="replay">Replay</button>
+                </div>
+            </div>
+
+            <div class="resultPage2">
+                <h1>Category Diagnostics Chart</h1>
+                <div class="chartBox">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+                <button class="backBtn">Back</button>
+            </div>
+
+            <div class="resultPage3">
+                <h1>Review Answer Key</h1>
+                <div class="allAnswerBox"></div>
+                <button class="backBtn">Back</button>
+            </div>
+        </div>
+    </div>
+                  </div>
+
+         </section>
+         </div>
+         </div>
+         <!-- Sidebar -->
+         <div id="sidebar">
+            <div class="inner">
+               <!-- Search -->
+               <!-- Menu -->
+               <nav id="menu">
+                  <header class="major">
+                     <h2>Menu</h2>
+                  </header>
+                  <ul>
+                     <li><a class="hover" href="index.html">Homepage</a></li>
+                     <li>
+                        <span class="opener">Educational Content</span></span>
+                        <ul>
+                           <li><a class="hover" href="Mathematics.html">Mathematics &#8508; </a></li>
+                           <li><a class="hover" href="Economics.html">Economics &#128200; &#128201;</a></li>
+                           <li><a class="hover" href="Music.html">Music &#9835;</a></li>
+                        </ul>
+                     </li>
+                     <li><a class="hover" href="Projects.html">Projects &#128449;</a></li>
+                     <li><a class="hover" href="Hobbies.html">Hobbies &#9998;</a></li>
+                     <li><a class="hover" href="Quizzes.html">Quizzes</a></li>
+                  </ul>
+               </nav>
+               <!-- Section -->
+               <section>
+                  <header class="major">
+                     <h2>My Contacts</h2>
+                  </header>
+                  <ul class="contact">
+                     <li class="icon solid fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox?compose">nembilwiphuluso@gmail.com</a></li>
+                     <li><a href=" https://wa.me/27648203986" class="icon brands fa-whatsapp">0648203986</a></li>
+                     <li><a href="https://www.linkedin.com/in/phuluso-nembilwi-0561a3358" class="icon brands fa-linkedin">Linkedin</a></li>
+                     <li><a href="https://www.instagram.com/phulus.op.111?igsh=bjhrZWpqOWg3N2Ez" class="icon brands fa-instagram">Instagram </a></li>
+                  </ul>
+               </section>
+               <!-- Footer -->
+               <footer id="footer">
+                  One Piece is the GOAT<a href="https://myanimelist.net/profile/Phuluffy">.</a>
+               </footer>
+            </div>
+         </div>
+      </div>
+      <!-- Scripts -->
+      <script src="Codes/js/jquery.min.js"></script>
+      <script src="Codes/js/browser.min.js"></script>
+      <script src="Codes/js/Quiz.js"></script>
+      <script src="Codes/js/breakpoints.min.js"></script>
+      <script src="Codes/js/util.js"></script>
+      <script src="Codes/js/main.js"></script>
+      <script src="./Codes/js/Graphs.js"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+   </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <link rel="icon" href="./Files/Misc/Phuluweb_logo.ico">
+      <title>Hobbies</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="Codes/css/main.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+      <style id="plotly.js-style-global"></style>
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         
+         function gtag(){dataLayer.push(arguments);}
+         
+         gtag('js', new Date());
+         
+         gtag('config', 'G-5QS150JSKP');
+      </script>
+      <style>
+         /* Chart Sizing Constraints */
+         .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 800px; /* Limits the max-width to center beautifully */
+            margin: 30px auto;
+         }
+         .chart-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+         }
+         .chart-container {
+            position: relative;
+            height: 400px; /* Constrains height while letting the grid remain responsive */
+            width: 100%;
+            margin-bottom: 20px;
+         }
+
+         /* Slideshow Structural Constraints */
+         .container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+         }
+         .mySlides {
+            display: none;
+            text-align: center;
+            height: 500px;
+            background-color: #1a1a1a;
+            will-change: transform, opacity;
+            transform: translateZ(0);
+         }
+         .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+
+         /* Slider Controls Positioning */
+         .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -25px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 10;
+         }
+         .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+         }
+         .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+         }
+         .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            background: rgba(0,0,0,0.5);
+            border-bottom-right-radius: 4px;
+            z-index: 10;
+         }
+         .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 6px 16px;
+            color: white;
+         }
+         .caption-container p {
+            margin: 0;
+         }
+      </style>
+   </head>
+   <body class="is-preload">
+      <div id="wrapper">
+         <div id="main">
+            <div class="inner">
+               <header id="header"><a href="Hobbies.html" class="logo"><strong>Hobbies</strong> Section</a>
+               <button onclick="DarkMode()">Dark mode ☽</button></header>
+               <a id="return-to-top"><i class="fas"></i></a> 
+               <section>
+                  <header class="main">
+                     <h1>Hobbies Section &#128449;</h1>
+                  </header>
+                  <table style="width:50%">
+                     <tr>
+                        <th>Contents</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           <ol>
+                              <li><a href="#Running">Running</a></li>
+                              <li><a href="#Drawing">Drawing</a></li>
+                              <li><a href="#Music">Music</a></li>
+                              <li><a href="#Philosophy">Philosophy</a></li>
+                           </ol>
+                        </td>
+                     </tr>
+                  </table>
+                  <hr>
+                  
+                  <div id="Running">
+                     <h2 class="Data collapsible">Running</h2>
+                     <div class="Collapse-content">
+                        <figure>
+                           <img src="./Files/Running/10km Run 5 Standard Bank Run_30 May 2026.jpg" alt="" style="width:90%"/>
+                           <figcaption>5th 10km run |Standard Bank Run|30 May 2026</figcaption>
+                        </figure>
+                        <figure>
+                           <img src="./Files/Running/10km Run 4 Joburg City Marathon_22 March 2026.jpg" alt="" style="width:90%"/>
+                           <figcaption>4th 10km run| Joburg City Marathon|22 March 2026</figcaption>
+                        </figure>
+                        <figure>
+                           <img src="./Files/Running/10km Run 3 Legends Township Marathon_22 Feb 2026.jpg" alt="" style="width:90%"/>
+                           <figcaption>3rd 10km Run |Legends Township Marathon|22 Feb 2026</figcaption>
+                        </figure>
+                        <figure>
+                           <img src="./Files/Running/10km Run 2 Joburg North City Marathon_01 Feb 2026.jpg" alt="" style="width:90%"/>
+                           <figcaption>2nd 10km run|Joburg North City Marathon|01 Feb 2026</figcaption>
+                        </figure>
+                        <figure>
+                           <img src="./Files/Running/10km Run 1 Soweto African Bank Marathon_29 Nov 2025.jpg" alt="" style="width:90%"/>
+                           <figcaption>1st 10km run| Soweto African Bank Marathon|29 Nov 2025 </figcaption>
+                        </figure>
+                        
+                        <div class="dashboard-container">
+                           <div class="chart-card">
+                              <div class="chart-container">
+                                 <canvas id="completionTimeChart"></canvas>
+                              </div>
+                              <div class="chart-container">
+                                 <canvas id="paceChart"></canvas>
+                              </div>
+                           </div>
+                        </div>
+
+                        <script>
+                           function formatSecondsToTime(totalSeconds) {
+                               const hrs = Math.floor(totalSeconds / 3600);
+                               const mins = Math.floor((totalSeconds % 3600) / 60);
+                               const secs = Math.floor(totalSeconds % 60);
+                               return `${hrs}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                           }
+                   
+                           function formatSecondsToPace(totalSeconds) {
+                               const mins = Math.floor(totalSeconds / 60);
+                               const secs = Math.floor(totalSeconds % 60);
+                               return `${mins}:${secs.toString().padStart(2, '0')} /km`;
+                           }
+                   
+                           const raceLabels = [
+                               ['29 Nov 2025'],
+                               ['01 Feb 2026'],
+                               ['22 Feb 2026'],
+                               ['22 Mar 2026'],
+                               ['31 May 2026']
+                           ];
+                   
+                           const completionTimesInSeconds = [5152, 5211, 4463, 4263, 3956];
+                   
+                           const ctxTime = document.getElementById('completionTimeChart').getContext('2d');
+                           new Chart(ctxTime, {
+                               type: 'bar',
+                               data: {
+                                   labels: raceLabels,
+                                   datasets: [{
+                                       label: '10km Finish Time',
+                                       data: completionTimesInSeconds,
+                                       backgroundColor: 'rgba(30, 58, 138, 0.85)',
+                                       hoverBackgroundColor: '#1e3a8a',
+                                       borderRadius: 6,
+                                       borderWidth: 0
+                                   }]
+                               },
+                               options: {
+                                   responsive: true,
+                                   maintainAspectRatio: false,
+                                   plugins: {
+                                       title: {
+                                           display: true,
+                                           text: '10km runs completion times',
+                                           font: { size: 16, weight: 'bold' }
+                                       },
+                                       legend: { display: false },
+                                       tooltip: {
+                                           callbacks: {
+                                               label: function(context) {
+                                                   return ` Time: ${formatSecondsToTime(context.parsed.y)}`;
+                                               }
+                                           }
+                                       }
+                                   },
+                                   scales: {
+                                       x: { grid: { display: false } },
+                                       y: {
+                                           title: { display: true, text: 'Duration (HH:MM:SS)' },
+                                           ticks: {
+                                               callback: function(value) { return formatSecondsToTime(value); },
+                                               stepSize: 600
+                                           }
+                                       }
+                                   }
+                               }
+                           });
+                   
+                           const pacesInSeconds = [515.2, 521.1, 446.3, 426.3, 395.6];
+                   
+                           const ctxPace = document.getElementById('paceChart').getContext('2d');
+                           new Chart(ctxPace, {
+                               type: 'bar',
+                               data: {
+                                   labels: raceLabels,
+                                   datasets: [{
+                                       label: 'Avg Pace',
+                                       data: pacesInSeconds,
+                                       backgroundColor: 'rgba(14, 116, 144, 0.85)',
+                                       hoverBackgroundColor: '#0e7490',
+                                       borderRadius: 6,
+                                       borderWidth: 0
+                                   }]
+                               },
+                               options: {
+                                   responsive: true,
+                                   maintainAspectRatio: false,
+                                   plugins: {
+                                       title: {
+                                           display: true,
+                                           text: '10km runs average pace per Kilometer',
+                                           font: { size: 16, weight: 'bold' }
+                                       },
+                                       legend: { display: false },
+                                       tooltip: {
+                                           callbacks: {
+                                               label: function(context) {
+                                                   return ` Pace: ${formatSecondsToPace(context.parsed.y)}`;
+                                               }
+                                           }
+                                       }
+                                   },
+                                   scales: {
+                                       x: { grid: { display: false } },
+                                       y: {
+                                           title: { display: true, text: 'Pace (MM:SS /km)' },
+                                           ticks: {
+                                               callback: function(value) { return formatSecondsToPace(value); },
+                                               stepSize: 60
+                                           }
+                                       }
+                                   }
+                               }
+                           });
+                        </script>
+                     </div>
+                  </div>
+                  
+                  <div id="Drawing">
+                     <h2 class="Data collapsible">Drawing</h2>
+                     <div class="Collapse-content">
+                        <div class="container">
+                           <div class="mySlides">
+                              <div class="numbertext">1 / 16</div>
+                              <img src="./Files/Art/Art0-Mother & Father.jpg" alt="Mother & Father">
+                           </div>
+                           
+                           <div class="mySlides">
+                              <div class="numbertext">2 / 16</div>
+                              <img src="./Files/Art/Art1-Luffy.jpg" alt="Luffy">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">3 / 16</div>
+                              <img src="./Files/Art/Art2-Gold Roger.jpg" alt="Gold Roger">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">4 / 16</div>
+                              <img src="./Files/Art/Art3-Brook.jpg" alt="Brook">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">5 / 16</div>
+                              <img src="./Files/Art/Art4-Kaori.jpg" alt="Kaori">
+                           </div>
+                           
+                           <div class="mySlides">
+                              <div class="numbertext">6 / 16</div>
+                              <img src="./Files/Art/Art5-Me and Luffy.jpg" alt="Me & Luffy">
+                           </div>
+                               
+                           <div class="mySlides">
+                              <div class="numbertext">7 / 16</div>
+                              <img src="./Files/Art/Art6-Ace.jpg" alt="Ace">
+                           </div>
+                           
+                           <div class="mySlides">
+                              <div class="numbertext">8 / 16</div>
+                              <img src="./Files/Art/Art7-Kakashi.jpg" alt="Kakashi">
+                           </div>
+                               
+                           <div class="mySlides">
+                              <div class="numbertext">9 / 16</div>
+                              <img src="./Files/Art/Art8-Luffy Skypiea.jpg" alt="Luffy Skypiea">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">10 / 16</div>
+                              <img src="./Files/Art/Art9-Okakuri.png" alt="Okabe and Kurisu">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">11 / 16</div>
+                              <img src="./Files/Art/Art10-Ugly Sky.jpg" alt="Ugly Sky">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">12 / 16</div>
+                              <img src="./Files/Art/Art11-Mathematics Building.jpg" alt="Mathematics Building">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">13 / 16</div>
+                              <img src="./Files/Art/Art12-Rendy and Mulalo.jpg" alt="Rendy and Mulalo">
+                           </div>
+
+                           <div class="mySlides">
+                              <div class="numbertext">14 / 16</div>
+                              <img src="./Files/Art/LuffyGraphArt.png" alt="Luffy Graph Art">
+                           </div>
+                           
+                           <div class="mySlides">
+                              <div class="numbertext">15 / 16</div>
+                              <img src="./Files/Art/SAGraphArt.png" alt="South African Flag Graph Art">
+                           </div>
+                           
+                           <div class="mySlides">
+                              <div class="numbertext">16 / 16</div>
+                              <img src="./Files/Art/K331 Theme Graph Art.png" alt="Mozart Piano sonata 11, K. 331 1st movement theme">
+                           </div>
+                               
+                           <a class="prev" onclick="plusSlides(-1)">❮</a>
+                           <a class="next" onclick="plusSlides(1)">❯</a>
+                           
+                           <div class="caption-container">
+                              <p id="caption"></p>
+                           </div>
+                        </div>
+
+                        <script>
+                           let slideIndex = 1;
+                           showSlides(slideIndex);
+                           
+                           function plusSlides(n) {
+                               showSlides(slideIndex += n);
+                           }
+                           
+                           function showSlides(n) {
+                               let i;
+                               let slides = document.getElementsByClassName("mySlides");
+                               let captionText = document.getElementById("caption");
+                               
+                               if (n > slides.length) { slideIndex = 1 }
+                               if (n < 1) { slideIndex = slides.length }
+                               
+                               for (i = 0; i < slides.length; i++) {
+                                   slides[i].style.display = "none";
+                               }
+                               
+                               if (slides[slideIndex-1]) {
+                                   slides[slideIndex-1].style.display = "block";
+                                   // Pull alternative descriptive text dynamically from image attributes for captions
+                                   let currentImg = slides[slideIndex-1].getElementsByTagName("img")[0];
+                                   if (currentImg && captionText) {
+                                       captionText.innerHTML = currentImg.alt;
+                                   }
+                               }
+                           }
+                        </script>
+                     </div>
+                  </div>
+
+                  <div id="Music">
+                     <h2 class="Data collapsible">Music</h2>
+                     <div class="Collapse-content">
+                        <a href="Music.html#Music%20and%20Mathematics">Check Music Section</a>
+                        <div></div>
+                     </div>
+                  </div>
+
+                  <div id="Philosophy">
+                     <h2 class="Data collapsible">Philosophy</h2>
+                     <div class="Collapse-content">
+                        <h3>Work in progress...</h3>
+                        <div></div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+
+         <div id="sidebar">
+            <div class="inner">
+               <nav id="menu">
+                  <header class="major">
+                     <h2>Menu</h2>
+                  </header>
+                  <ul>
+                     <li><a class="hover" href="index.html">Homepage</a></li>
+                     <li>
+                        <span class="opener">Educational Content</span>
+                        <ul>
+                           <li><a class="hover" href="Mathematics.html">Mathematics &#8508; </a></li>
+                           <li><a class="hover" href="Economics.html">Economics &#128200; &#128201;</a></li>
+                           <li><a class="hover" href="Music.html">Music &#9835;</a></li>
+                        </ul>
+                     </li>
+                     <li><a class="hover" href="Projects.html">Projects &#128449;</a></li>
+                     <li><a class="hover" href="Hobbies.html">Hobbies &#9998;</a></li>
+                     <li><a class="hover" href="Quizzes.html">Quizzes</a></li>
+                  </ul>
+               </nav>
+               <section>
+                  <header class="major">
+                     <h2>My Contacts</h2>
+                  </header>
+                  <ul class="contact">
+                     <li class="icon solid fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox?compose">nembilwiphuluso@gmail.com</a></li>
+                     <li><a href="https://wa.me/27648203986" class="icon brands fa-whatsapp">0648203986</a></li>
+                     <li><a href="https://www.linkedin.com/in/phuluso-nembilwi-0561a3358" class="icon brands fa-linkedin">Linkedin</a></li>
+                     <li><a href="https://www.instagram.com/phulus.op.111?igsh=bjhrZWpqOWg3N2Ez" class="icon brands fa-instagram">Instagram</a></li>
+                  </ul>
+               </section>
+               <footer id="footer">One Piece is the GOAT<a href="https://myanimelist.net/profile/Phuluffy">.</a></footer>
+            </div>
+         </div>
+      </div>
+
+      <script src="Codes/js/jquery.min.js"></script>
+      <script src="./Codes/js/Graphs.js"></script>
+      <script src="Codes/js/browser.min.js"></script>
+      <script src="Codes/js/breakpoints.min.js"></script>
+      <script src="Codes/js/util.js"></script>
+      <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+      <script src="Codes/js/main.js"></script>
+      <script src="./Codes/js/Maps.js"></script>  
+      <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+   </body>
+</html>
