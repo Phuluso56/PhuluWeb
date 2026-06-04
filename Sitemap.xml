@@ -3,7 +3,7 @@
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://phulusonembilwi.co.za/index.html</loc>
-		<lastmod>2026-01-12</lastmod>
+		<lastmod>2026-06-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -14,16 +14,16 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://phulusonembilwi.co.za/QuizDemo1.html</loc>
-		<lastmod>2025-12-15</lastmod>
+		<loc>https://phulusonembilwi.co.za/Quizzes.html</loc>
+		<lastmod>2026-06-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://phulusonembilwi.co.za/Art.html</loc>
-		<lastmod>2025-12-15</lastmod>
+		<loc>https://phulusonembilwi.co.za/Hobbies.html</loc>
+		<lastmod>2026-06-04</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.7</priority>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://phulusonembilwi.co.za/Music.html</loc>
@@ -33,7 +33,7 @@
 	</url>
 	<url>
 		<loc>https://phulusonembilwi.co.za/Economics.html</loc>
-		<lastmod>2025-12-15</lastmod>
+		<lastmod>2026-01-12</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
