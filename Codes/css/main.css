@@ -161,7 +161,10 @@ h2.MathTopic {
   color: #000000;   }
 h2.MusicTopic {
   background:royalblue;
-  color: #000000;    }
+  color: #000000;}
+h2.HobbiesTopic {
+  background:rgb(225, 214, 65);
+  color: #000000;      }
 
 
 
@@ -2533,6 +2536,7 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  
 }
 
 /* Buttons */
@@ -2614,3 +2618,252 @@ img {
   display: block;
   padding-top: 100%; /* default square */
 }
+
+
+
+
+/*Quiz STYLE*/
+
+
+
+
+#quiz-menu {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.menu-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.quizArea {
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.mc_quiz {
+    color: #3a5336;
+    margin-bottom: 20px;
+}
+
+.multipleChoiceQues {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.quizBox {
+    width: 90%;
+    margin: auto;
+}
+
+.question {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.buttonArea {
+    text-align: right;
+    height: 4.5em;
+    width: 300px;
+    margin: 20px auto;
+}
+
+/* Controller Mechanics styling */
+button, .menu-btn {
+    height: 4em;
+    width: 280px;
+    padding: 1em;
+    background-color: #f1f2ec;
+    border: none;
+    border-radius: 4px;
+    color: #7aa4a9;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#next:hover, #submit:hover, .viewanswer:hover, .viewchart:hover, .backBtn:hover, .replay:hover, .menu-btn:hover {
+    letter-spacing: 0.15em;
+    background-color: #3a5336;
+    color: #fff;
+}
+
+.viewanswer, .viewchart, .replay {
+    width: 30%;
+    margin: 10px 1.5%;
+}
+
+.backBtn {
+    width: 120px;
+    height: 3em;
+    margin-top: 20px;
+}
+
+.resultArea {
+    display: none;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.chartBox {
+    width: 40%;
+    margin: auto;
+}
+
+.resultPage1, .resultPage2, .resultPage3 {
+    text-align: center;
+}
+
+.score-summary-text {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.resultBtns {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.resultPage2, .resultPage3 {
+    display: none;
+}
+
+.allAnswerBox {
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+}
+
+._resultboard {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    padding: 2%;
+    height: 180px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-align: left;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+._resultboard:nth-child(even) {
+    margin-left: 4%;
+}
+
+._header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    height: 65px;
+    overflow: hidden;
+}
+
+._yourans, ._correct {
+    margin-bottom: 6px;
+    position: relative;
+    line-height: 1.8;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+._correct { background: rgba(0,0,0,0.15); }
+.h-correct { background: #968089; }
+.h-incorrect { background: #ab4e6b; }
+
+.resultPage3 h1, .resultPage1 h1, .resultPage2 h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3a5336;
+    color: #3a5336;
+}
+
+/* Linear Tracking Strip */
+.my-progress {
+    position: relative;
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+progress {
+    display: block;
+    width: 100%;
+    height: 12px;
+    background-color: #f1f2ec;
+    border-radius: 6px;
+}
+
+progress::-webkit-progress-bar { background-color: #f1f2ec; border-radius: 6px; }
+progress::-webkit-progress-value { background-color: #3a5336; border-radius: 6px; }
+
+.js-my-progress-completion {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Extended Click Row Target Settings */
+ul#optionList {
+    list-style-type: none;
+    width: 380px;
+    margin: auto;
+    text-align: left;
+    padding: 0;
+}
+
+li.myoptions {
+    position: relative;
+    padding: 15px 15px 15px 45px;
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: background 0.2s ease-in-out, transform 0.1s ease;
+}
+
+li.myoptions:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+li.myoptions:active {
+    transform: scale(0.98);
+}
+
+li.myoptions input[type="radio"] {
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+li.myoptions label {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Running charts */
+
