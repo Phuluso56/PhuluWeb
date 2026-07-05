@@ -1,33 +1,33 @@
 var quizdata = [
   // --- CATEGORY 1: Math (10 Questions) ---
-  { question: "What is 1 + 1?", options: ["2", "0", "11", "Unsolvable"], answer: "2", category: 1 },
+  { question: "What is $1 + 1$?", options: ["2", "0", "11", "Unsolvable"], answer: "2", category: 1 },
   { question: "What is 25% of 50?", options: ["25", "12.5", "50", "None of the above"], answer: "12.5", category: 1 },
   { question: "If you roll two six-sided dice, what is the probability that you get an even number sum?", options: ["33.33%", "50%", "100%", "66.66%"], answer: "50%", category: 1 },
   { question: "Phuluso is 6 years older than Luffy. Together their ages add up to 52 years. How old is Phuluso?", options: ["29", "25", "18", "26"], answer: "29", category: 1 },
   { question: "The longest side of a rectangular house is 25m. If you walk one lap around the house within close proximity you walk 74m. What is the approximate length of the shortest side of the house?", options: ["12m", "25m", "10m", "24m"], answer: "12m", category: 1 },
   { question: "How many sides does an equilateral triangle have?", options: ["Infinite", "6", "3", "12"], answer: "3", category: 1 },
-  { question: "If A + A = 4, A + B = 5, and A x B + 2C = 18, what is A + B + C?", options: ["6", "5", "3", "11"], answer: "11", category: 1 },
-  { question: "How many digits does pi have?", options: ["Infinite", "3.141592", "Undefined", "9"], answer: "Infinite", category: 1 },
-{ 
-  question: "What is the Taylor series expansion of \\(\\sin(x)\\) centered at \\(a = 0\\)?", 
-  options: [
-    "\\(x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots\\)", 
-    "\\(1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\dots\\)", 
-    "\\(x + \\frac{x^3}{3!} + \\frac{x^5}{5!} + \\frac{x^7}{7!} + \\dots\\)", 
-    "\\(1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots\\)"
-  ], 
-  answer: "\\(x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots\\)", 
-  category: 1 
-},
+  { question: "If $A + A = 4$, $A + B = 5$, and $A \\times B + 2C = 18$, what is $A + B + C$?", options: ["6", "5", "3", "11"], answer: "11", category: 1 },
+  { question: "How many digits does pi ($\pi$) have?", options: ["Infinite", "3.141592", "Undefined", "9"], answer: "Infinite", category: 1 },
+  { 
+    question: "What is the Taylor series expansion of $\\sin(x)$ centered at $a = 0$?", 
+    options: [
+      "$x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots$", 
+      "$1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\dots$", 
+      "$x + \\frac{x^3}{3!} + \\frac{x^5}{5!} + \\frac{x^7}{7!} + \\dots$", 
+      "$1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots$"
+    ], 
+    answer: "$x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots$", 
+    category: 1 
+  },
   { 
     question: "Which of the following statements formally defines the Archimedean property of real numbers?", 
     options: [
-      "For any \\(x, y \\in \\mathbb{R}\\) with \\(x > 0\\), there exists an \\(n \\in \\mathbb{N}\\) such that \\(nx > y\\).", 
-      "For every non-empty subset \\(S \\subset \\mathbb{R}\\) that is bounded above, \\(\\sup(S) \\in \\mathbb{R}\\).", 
-      "If \\(a, b \\in \\mathbb{R}\\) and \\(a < b\\), then there exists a rational number \\(r \\in \\mathbb{Q}\\) such that \\(a < r < b\\).", 
-      "For any sequence \\((x_n)\\), if \\(\\lim_{n \\to \\infty} x_n = L\\), then the limit \\(L\\) is unique."
+      "For any $x, y \\in \\mathbb{R}$ with $x > 0$, there exists an $n \\in \\mathbb{N}$ such that $nx > y$.", 
+      "For every non-empty subset $S \\subset \\mathbb{R}$ that is bounded above, \\sup(S) \\in \\mathbb{R}.", 
+      "If $a, b \\in \\mathbb{R}$ and $a < b$, then there exists a rational number $r \\in \\mathbb{Q}$ such that $a < r < b$.", 
+      "For any sequence $(x_n)$, if \\lim_{n \\to \\infty} x_n = L, then the limit $L$ is unique."
     ], 
-    answer: "For any \\(x, y \\in \\mathbb{R}\\) with \\(x > 0\\), there exists an \\(n \\in \\mathbb{N}\\) such that \\(nx > y\\).", 
+    answer: "For any $x, y \\in \\mathbb{R}$ with $x > 0$, there exists an $n \\in \\mathbb{N}$ such that $nx > y$.", 
     category: 1 
   },
 
@@ -39,7 +39,7 @@ var quizdata = [
   { question: "What is the largest city by population in South Africa?", options: ["Cape Town", "Durban", "Johannesburg", "Pretoria"], answer: "Johannesburg", category: 2 },
   { question: "Who among these individuals has not won a Nobel Prize in South Africa?", options: ["Nelson Mandela", "Desmond Tutu", "F.W. de Klerk", "Winnie Mashaba"], answer: "Winnie Mashaba", category: 2 },
   { question: "How many official public holidays are there in South Africa under the Public Holidays Act?", options: ["21", "12", "15", "9"], answer: "12", category: 2 },
-  { question: "Who scored the first goal in 2010 FIFA world cup?", options: ["Siphiwe Tshabalala", "El Matador", "Benni McCarthy", "Cristiano Ronaldo"], answer: "Siphiwe Tshabalala", category: 2 },
+  { question: "Who scored the first goal in 2010 FIFA world cup?", options: ["Siphiwe Tshabalala", "El Matador", "Benni McCarthy", "Cristiano Ronaldo"], answer: "Siphiwe Tshabalala", category: 2 }, // FIXED TYPO HERE
   { question: "What is the national flower of South Africa?", options: ["King Protea", "Jacaranda ", "Sunflower", "Aloe"], answer: "King Protea", category: 2 },
   { question: "In what year was the South African national football team, Bafana Bafana, officially founded?", options: ["1992", "1994", "2010", "1906"], answer: "1992", category: 2 },
 
@@ -60,23 +60,25 @@ var quizdata = [
   { question: "Approximately how many kilometers long is the Comrades Marathon?", options: ["42 km", "89 km", "56 km", "81 km"], answer: "89 km", category: 4 },
   { question: "What does the word 'Hippopotamus' mean in ancient Greek?", options: ["River horse", "Water monster", "River Pig", "Armored pig"], answer: "River horse", category: 4 },
   { question: "How many confirmed chemical elements are currently on the periodic table?", options: ["69", "143", "118", "120"], answer: "118", category: 4 },
-{ 
-  "question": "What is the approximate mass of the Earth?", 
-  "options": ["$5.97 \\times 10^{24} \\text{ kg}$", "$7.34 \\times 10^{22} \\text{ kg}$", "$1.98 \\times 10^{30} \\text{ kg}$", "$3.84 \\times 10^{18} \\text{ kg}$"], 
-  "answer": "$5.97 \\times 10^{24} \\text{ kg}$", 
-  "category": 4 
-},  { question: "What is the average distance from the Earth to the Moon?", options: ["150,000 km", "384,400 km", "500,000 km", "1,000,000 km"], answer: "384,400 km", category: 4 },
+  { 
+    "question": "What is the approximate mass of the Earth?", 
+    "options": ["$5.97 \\times 10^{24} \\text{ kg}$", "$7.34 \\times 10^{22} \\text{ kg}$", "$1.98 \\times 10^{30} \\text{ kg}$", "$3.84 \\times 10^{18} \\text{ kg}$"], 
+    "answer": "$5.97 \\times 10^{24} \\text{ kg}$", 
+    "category": 4 
+  },
+  { question: "What is the average distance from the Earth to the Moon?", options: ["150,000 km", "384,400 km", "500,000 km", "1,000,000 km"], answer: "384,400 km", category: 4 },
   { question: "What is the deepest ocean on Earth?", options: ["The All Blue", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], answer: "Pacific Ocean", category: 4 },
   { question: "How many symphonies did Ludwig van Beethoven write and publish?", options: ["5", "9", "16", "32"], answer: "9", category: 4 },
   { question: "How many psalms are there in the Bible?", options: ["100", "150", "119", "121"], answer: "150", category: 4 },
   { question: "What is officially recognized as the oldest active association football club in the world?", options: ["Sheffield F.C.", "Bafana Bafana", "Real Madrid", "Manchester United"], answer: "Sheffield F.C.", category: 4 },
   { question: "How many strings does a standard violin have?", options: ["3", "4", "5", "6"], answer: "4", category: 4 },
-{ 
-  "question": "What is the mathematical formula for the Pythagorean theorem?", 
-  "options": ["$E = mc^2$", "$a^2 + b^2 = c^2$", "$A = \\pi r^2$", "$y = mx + c$"], 
-  "answer": "$a^2 + b^2 = c^2$", 
-  "category": 4 },
- { question: "Where was the melody for the European Anthem adapted from?", options: ["Beethoven's 9th Symphony", "Mozart's Requiem", "Haydn's emperor's hymn", "Handel's Messiah"], answer: "Beethoven's 9th Symphony", category: 4 },
+  { 
+    "question": "What is the mathematical formula for the Pythagorean theorem?", 
+    "options": ["$E = mc^2$", "$a^2 + b^2 = c^2$", "$A = \\pi r^2$", "$y = mx + c$"], 
+    "answer": "$a^2 + b^2 = c^2$", 
+    "category": 4 
+  },
+  { question: "Where was the melody for the European Anthem adapted from?", options: ["Beethoven's 9th Symphony", "Mozart's Requiem", "Haydn's emperor's hymn", "Handel's Messiah"], answer: "Beethoven's 9th Symphony", category: 4 },
   { question: "Who has won the most Ballon d'Or awards in football history?", options: ["Cristiano Ronaldo", "Lionel Messi", "Pelé", "Diego Maradona"], answer: "Lionel Messi", category: 4 },
   { question: "What is the largest planet in our solar system?", options: ["Saturn", "Jupiter", "Neptune", "Earth"], answer: "Jupiter", category: 4 },
   { question: "What mythology does the god Thor originate from?", options: ["Greek Mythology", "Roman Mythology", "Norse Mythology", "Egyptian Mythology"], answer: "Norse Mythology", category: 4 },
@@ -225,8 +227,7 @@ function renderChart(data) {
                 borderWidth: 1
             }]
         }
-    }
-  );
+    });
 }
 
 function getAllAnswer(results) {
@@ -297,7 +298,7 @@ $(document).ready(function() {
     var clicked = 0;
     var questions = [];
 
-$(".menu-btn").on('click', function() {
+    $(".menu-btn").on('click', function() {
         var selectedCategory = parseInt($(this).data('category'));
         questions = generateQuestions(selectedCategory);
 
