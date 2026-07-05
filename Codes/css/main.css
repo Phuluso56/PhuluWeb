@@ -2649,7 +2649,7 @@ img {
 }
 
 .mc_quiz {
-    color: #3a5336;
+    color: rgb(147, 193, 245);
     margin-bottom: 20px;
 }
 
@@ -2677,26 +2677,11 @@ img {
     margin: 20px auto;
 }
 
-/* Controller Mechanics styling */
-button, .menu-btn {
-    height: 4em;
-    width: 280px;
-    padding: 1em;
-    background-color: #f1f2ec;
-    border: none;
-    border-radius: 4px;
-    color: #7aa4a9;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+
 
 #next:hover, #submit:hover, .viewanswer:hover, .viewchart:hover, .backBtn:hover, .replay:hover, .menu-btn:hover {
     letter-spacing: 0.15em;
-    background-color: #3a5336;
+    background-color: rgb(226, 255, 255);
     color: #fff;
 }
 
@@ -2755,7 +2740,7 @@ button, .menu-btn {
     padding: 2%;
     height: 180px;
     vertical-align: top;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(33, 44, 196, 0.918);
     text-align: left;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -2781,15 +2766,12 @@ button, .menu-btn {
     border-radius: 2px;
 }
 
-._correct { background: rgba(0,0,0,0.15); }
-.h-correct { background: #968089; }
-.h-incorrect { background: #ab4e6b; }
+.h-correct { background: rgb(98, 219, 98); }
+.h-incorrect { background: tomato; }
 
 .resultPage3 h1, .resultPage1 h1, .resultPage2 h1 {
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #3a5336;
-    color: #3a5336;
 }
 
 /* Linear Tracking Strip */
@@ -2804,12 +2786,12 @@ progress {
     display: block;
     width: 100%;
     height: 12px;
-    background-color: #f1f2ec;
+    background-color: red;
     border-radius: 6px;
 }
 
 progress::-webkit-progress-bar { background-color: #f1f2ec; border-radius: 6px; }
-progress::-webkit-progress-value { background-color: #3a5336; border-radius: 6px; }
+progress::-webkit-progress-value { background-color: green; border-radius: 6px; }
 
 .js-my-progress-completion {
     margin-top: 5px;
@@ -2829,14 +2811,13 @@ li.myoptions {
     position: relative;
     padding: 15px 15px 15px 45px;
     margin-bottom: 12px;
-    background: rgba(255, 255, 255, 0.12);
     border-radius: 6px;
     cursor: pointer; 
     transition: background 0.2s ease-in-out, transform 0.1s ease;
 }
 
 li.myoptions:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgb(175, 168, 247);
 }
 
 li.myoptions:active {
@@ -2864,6 +2845,4 @@ li.myoptions label {
     display: none !important;
 }
 
-
-/* Running charts */
 
