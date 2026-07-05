@@ -87,3 +87,321 @@ var quizdata = [
   { question: "Which global religion follows the Quran as its central holy text?", options: ["GODA", "Hinduism", "Buddhism", "Islam"], answer: "Islam", category: 4 },
   { question: "In which year did World War II officially end?", options: ["1994", "1939", "1945", "2005"], answer: "1945", category: 4 }
 ];
+
+// App Variables Matrix
+var resultList = [];
+var $progressValue = 0;
+var myChartInstance = null; 
+
+function shuffleArray(questions) { 
+    return questions.sort(function() { return 0.5 - Math.random(); }); 
+}
+
+function generateQuestions(selectedCategory) {
+    var filtered = quizdata.filter(function(item) {
+        return item.category === selectedCategory;
+    });
+    return shuffleArray(filtered);
+}
+
+function returnOptionList(opts, i) {
+    return '<li class="myoptions" data-value="' + opts + '">' +
+           '<input type="radio" name="opts" value="' + opts + '" id="opt_' + i + '">' +
+           '<label for="opt_' + i + '">' + opts + '</label>' +
+           '<div class="bullet"></div>' +
+           '</li>';
+}
+
+function renderOptions(optionList) {
+    var ulContainer = $('<ul>').attr('id', 'optionList');
+    for (var i = 0, len = optionList.length; i < len; i++) {
+        var optionContainer = returnOptionList(optionList[i], i);
+        ulContainer.append(optionContainer);
+    }
+    $(".answerOptions").html('').append(ulContainer);
+}
+
+function renderQuestion(question) { 
+    $(".question").html("<h3>" + question + "</h3>"); 
+}
+
+function renderQuiz(questions, index) {
+    var currentQuest = questions[index];
+    renderQuestion(currentQuest.question);
+    renderOptions(currentQuest.options);
+    
+    // CRITICAL FIX: Forces MathJax to scan the DOM and compile the new math code right after injection
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        MathJax.typesetPromise();
+    }
+}
+
+function getCorrectAnswer(questions, index) { 
+    return questions[index].answer; 
+}
+
+function correctAnswerArray(resultByCat) {
+    var arrayForChart = [0, 0, 0, 0];
+    for (var i = 0; i < resultByCat.length; i++) {
+        var catId = resultByCat[i].category;
+        if (catId >= 1 && catId <= 4) {
+            arrayForChart[catId - 1] = resultByCat[i].correctanswer;
+        }
+    }
+    return arrayForChart;
+}
+
+function genResultArray(results, wrong) {
+    var resultByCat = resultByCategory(results);
+    var arrayForChart = correctAnswerArray(resultByCat);
+    arrayForChart.push(wrong); 
+    return arrayForChart;
+}
+
+function countAnswers(results) {
+    var countCorrect = 0, countWrong = 0;
+    for (var i = 0; i < results.length; i++) {
+        if (results[i].iscorrect == true) countCorrect++; 
+        else countWrong++;
+    }
+    return [countCorrect, countWrong];
+}
+
+function resultByCategory(results) {
+    var categoryCount = [];
+    results.reduce(function (res, value) {
+        if (!res[value.category]) {
+            res[value.category] = { category: value.category, correctanswer: 0 };
+            categoryCount.push(res[value.category]);
+        }
+        var val = (value.iscorrect == true) ? 1 : 0;
+        res[value.category].correctanswer += val;
+        return res;
+    }, {});
+    categoryCount.sort(function(a, b) { return a.category - b.category; });
+    return categoryCount;
+}
+
+function totalPieChart(_upto, _cir_progress_id, _correct, _incorrect) {
+    $("#" + _cir_progress_id).find("._text_incor").html("Incorrect : " + _incorrect);
+    $("#" + _cir_progress_id).find("._text_cor").html("Correct : " + _correct);
+    var unchnagedPer = _upto;
+    _upto = (_upto > 100) ? 100 : ((_upto < 0) ? 0 : _upto);
+    var _progress = 0;
+    var _cir_progress = $("#" + _cir_progress_id).find("._cir_P_y");
+    var _text_percentage = $("#" + _cir_progress_id).find("._cir_Per");
+    var _sleep = setInterval(_animateCircle, 25);
+
+    function _animateCircle() {
+        var _input_percentage = (_upto / 100) * 764;
+        var _percentage = (_progress / 100) * 764;
+        _text_percentage.html(_progress + '%');
+        if (_percentage >= _input_percentage) {
+            _text_percentage.html(unchnagedPer + '%<tspan x="50%" dy="1.9em">Your Score</tspan>');
+            clearInterval(_sleep);
+        } else {
+            _progress++;
+            _cir_progress.attr("stroke-dasharray", _percentage + ',764');
+        }
+    }
+}
+
+function renderBriefChart(correct, total, incorrect) {
+    var percent = (100 * correct / total);
+    if (Math.round(percent) !== percent) { percent = percent.toFixed(2); }
+    totalPieChart(percent, '_cir_progress', correct, incorrect);
+}
+
+function renderChart(data) {
+    var ctx = document.getElementById("myChart").getContext('2d');
+    if (myChartInstance !== null) {
+        myChartInstance.destroy();
+    }
+    myChartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Maths", "History", "Pop Culture", "General Knowledge", "Incorrect Slices"],
+            datasets: [{
+                data: data,
+                backgroundColor: ['#e6ded4', '#968089', '#e3c3d4', '#4fa3ab', '#ab4e6b'],
+                borderWidth: 1
+            }]
+        }
+    }
+  );
+}
+
+function getAllAnswer(results) {
+    var innerhtml = "";
+    for (var i = 0; i < results.length; i++) {
+        var _classH = ((results[i].iscorrect) ? "h-correct" : "h-incorrect");
+        var _html = '<div class="_resultboard ' + _classH + '">' +
+                    '<div class="_header">' + (i + 1) + ". " + results[i].question + '</div>' +
+                    '<div class="_yourans">Your Answer: ' + results[i].clicked + '</div>';
+        if (!results[i].iscorrect) {
+            _html += '<div class="_correct">Correct Answer: ' + results[i].answer + '</div>';
+        }
+        _html += '</div>';
+        innerhtml += _html;
+    }
+    $(".allAnswerBox").html('').append(innerhtml);
+    
+    // Reruns MathJax checking down the final assessment summary window
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        MathJax.typesetPromise();
+    }
+}
+
+function renderResult(resultList) {
+    var countCorrect = countAnswers(resultList)[0], countWrong = countAnswers(resultList)[1];
+    renderBriefChart(countCorrect, resultList.length, countWrong);
+}
+
+function renderChartResult() {
+    var countWrong = countAnswers(resultList)[1];
+    var dataForChart = genResultArray(resultList, countWrong);
+    renderChart(dataForChart);
+}
+
+function getProgressindicator(length) {
+    var progressbarhtml = " ";
+    for (var i = 0; i < length; i++) {
+        progressbarhtml += '<div class="my-progress-indicator progress_' + (i + 1) + ' ' + ((i == 0) ? "active" : "") + '">';
+    }
+    $(progressbarhtml).insertAfter(".my-progress-bar");
+}
+
+function changeProgressValue(totalQuestions) {
+    var increment = 100 / totalQuestions;
+    $progressValue += increment;
+    if ($progressValue > 100) $progressValue = 100;
+    
+    $('.my-progress').find('.my-progress-indicator.active').next('.my-progress-indicator').addClass('active');
+    $('progress').val($progressValue);
+    $('.js-my-progress-completion').html(Math.round($progressValue) + '% complete');
+}
+
+function addClickedAnswerToResult(questions, presentIndex, clicked) {
+    var correct = getCorrectAnswer(questions, presentIndex);
+    var result = {
+        index: presentIndex,
+        question: questions[presentIndex].question,
+        clicked: clicked,
+        iscorrect: (clicked == correct) ? true : false,
+        answer: correct,
+        category: questions[presentIndex].category
+    };
+    resultList.push(result);
+}
+
+$(document).ready(function() {
+    var presentIndex = 0;
+    var clicked = 0;
+    var questions = [];
+
+$(".menu-btn").on('click', function() {
+        var selectedCategory = parseInt($(this).data('category'));
+        questions = generateQuestions(selectedCategory);
+
+        if(questions.length === 0) {
+            alert("Empty category repository initialization vector error!");
+            return;
+        }
+
+        // --- ADDED: Map categories to dynamic scorecard titles ---
+        var categoryTitles = {
+            1: "Mathematics Score",
+            2: "South African Trivia Score",
+            3: "Pop Culture Score",
+            4: "General Knowledge Score"
+        };
+        // This targets the h1 inside the scorecard results container and updates its text
+        $(".resultPage1 h1").text(categoryTitles[selectedCategory] || "Performance Scorecard");
+        // ---------------------------------------------------------
+
+        $("#quiz-menu").hide();
+        $(".quizArea").show();
+
+        renderQuiz(questions, presentIndex);
+        getProgressindicator(questions.length);
+    });
+
+    $(".answerOptions").on('click', '.myoptions', function(e) {
+        var $radio = $(this).find('input[type="radio"]');
+        $radio.prop('checked', true);
+        
+        clicked = $(this).data('value');
+        
+        if (questions.length == (presentIndex + 1)) {
+            $("#submit").removeClass('hidden');
+            $("#next").addClass("hidden");
+        } else {
+            $("#next").removeClass("hidden");
+        }
+    });
+
+    $("#next").on('click', function(e) {
+        e.preventDefault();
+        addClickedAnswerToResult(questions, presentIndex, clicked);
+        $(this).addClass("hidden");
+        presentIndex++;
+        renderQuiz(questions, presentIndex);
+        changeProgressValue(questions.length);
+    });
+
+    $("#submit").on('click', function(e) {
+        addClickedAnswerToResult(questions, presentIndex, clicked);
+        $('.multipleChoiceQues').hide();
+        $(".resultArea").show();
+        renderResult(resultList);
+    });
+
+    $(".resultArea").on('click', '.viewchart', function() {
+        $(".resultPage2").show();
+        $(".resultPage1").hide();
+        $(".resultPage3").hide();
+        renderChartResult();
+    });
+
+    $(".resultArea").on('click', '.backBtn', function() {
+        $(".resultPage1").show();
+        $(".resultPage2").hide();
+        $(".resultPage3").hide();
+        renderResult(resultList);
+    });
+
+    $(".resultArea").on('click', '.viewanswer', function() {
+        $(".resultPage3").show();
+        $(".resultPage2").hide();
+        $(".resultPage1").hide();
+        getAllAnswer(resultList);
+    });
+
+    $(document).on('click', '.replay', function () {
+        resultList = [];
+        $progressValue = 0;
+        presentIndex = 0;
+        clicked = 0;
+        questions = [];
+        
+        if (myChartInstance !== null) {
+            myChartInstance.destroy();
+            myChartInstance = null;
+        }
+
+        $(".my-progress-indicator").remove();
+        $("progress").val(0);
+        $('.js-my-progress-completion').html('0% complete');
+        
+        $("#next").addClass("hidden");
+        $("#submit").addClass("hidden");
+        
+        $(".resultArea").hide();
+        $(".resultPage2").hide();
+        $(".resultPage3").hide();
+        $(".resultPage1").show();
+        $('.multipleChoiceQues').show();
+        $(".quizArea").hide();
+        $("#quiz-menu").show();
+    });
+});
