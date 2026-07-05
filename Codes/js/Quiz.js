@@ -1,5 +1,5 @@
 var quizdata = [
-  // --- CATEGORY 1: Math (10 Questions) ---
+  // --- CATEGORY 1: Mathematics (10 Questions) ---
   { question: "What is $$1 + 1$$?", options: ["2", "0", "11", "Unsolvable"], answer: "2", category: 1 },
   { question: "What is 25% of 50?", options: ["25", "12.5", "50", "None of the above"], answer: "12.5", category: 1 },
   { question: "If you roll two six-sided dice, what is the probability that you get an even number sum?", options: ["33.33%", "50%", "100%", "66.66%"], answer: "50%", category: 1 },
