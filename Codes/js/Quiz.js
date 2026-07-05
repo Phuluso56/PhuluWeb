@@ -39,7 +39,7 @@ var quizdata = [
   { question: "What is the largest city by population in South Africa?", options: ["Cape Town", "Durban", "Johannesburg", "Pretoria"], answer: "Johannesburg", category: 2 },
   { question: "Who among these individuals has not won a Nobel Prize in South Africa?", options: ["Nelson Mandela", "Desmond Tutu", "F.W. de Klerk", "Winnie Mashaba"], answer: "Winnie Mashaba", category: 2 },
   { question: "How many official public holidays are there in South Africa under the Public Holidays Act?", options: ["21", "12", "15", "9"], answer: "12", category: 2 },
-  { question: "Who scored the first goal in 2010 FIFA world cup?", options: ["Siphiwe Tshabalala", "El Matador", "Benni McCarthy", "Cristiano Ronaldo"], answer: "8", category: 2 },
+  { question: "Who scored the first goal in 2010 FIFA world cup?", options: ["Siphiwe Tshabalala", "El Matador", "Benni McCarthy", "Cristiano Ronaldo"], answer: "Siphiwe Tshabalala", category: 2 },
   { question: "What is the national flower of South Africa?", options: ["King Protea", "Jacaranda ", "Sunflower", "Aloe"], answer: "King Protea", category: 2 },
   { question: "In what year was the South African national football team, Bafana Bafana, officially founded?", options: ["1992", "1994", "2010", "1906"], answer: "1992", category: 2 },
 
