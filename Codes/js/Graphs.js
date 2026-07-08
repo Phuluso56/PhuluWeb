@@ -647,7 +647,7 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "South Africa",
-    data:  [27.7,26.7,27.6,30.1,32.6,34.5,34.5,32.9,32.9,31.9  ],
+    data:  [27.7,26.7,27.6,30.1,32.6,34.5,32.9,32.9,32.9,32.7 ],
     lineTension: 0,
     fill: false,
     borderColor: 'Black'
@@ -655,7 +655,7 @@ var dataFirst = {
 
 var dataSecond = {
     label: "Graduates",
-    data:[7.3,7.9,7.9,9.5,9.3,12.6,10.6,10.6,11.8,8.7 ],
+    data:[7.3,7.9,7.9,9.5,9.3,12.6,10.6,11.8,11.7,12.2 ],
     lineTension: 0,
     fill: false,
   borderColor: 'limegreen',
@@ -665,7 +665,7 @@ var dataSecond = {
   
 var dataThird = {
     label: "Matric",
-    data:[27.5,28.2,28.7,31.4,34,36.5,35.6,34.5,33.8 ],
+    data:[27.5,28.2,28.7,31.4,34,36.5,35.6,34.5,34.9,35.7 ],
     lineTension: 0,
     fill: false,
   borderColor: 'orange',
@@ -675,7 +675,7 @@ var dataThird = {
   
 var dataFourth = {
     label: "No matric",
-    data:[33.1,31.1,32.5,35.2,38.3,39.8,37.6,39.1,38.2 ],
+    data:[33.1,31.1,32.5,35.2,38.3,39.8,37.6,39.1,39,37.6 ],
     lineTension: 0,
     fill: false,
   borderColor: 'red',
@@ -685,7 +685,7 @@ var dataFourth = {
   
 var dataFifth = {
     label: "Other Tertiary",
-    data:[17.8,15.6,17.2,19.2,21.2,22.3,23.5,22.5,19.8 ],
+    data:[17.8,15.6,17.2,19.2,21.2,22.3,23.5,22.5,22.1,22.2 ],
     lineTension: 0,
     fill: false,
   borderColor: 'darkgreen',
@@ -694,7 +694,7 @@ var dataFifth = {
   };
 
 var Years = {
-  labels: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2024_Q4'],
+  labels: ['2017Q1', '2018Q1', '2019Q1', '2020Q1', '2021Q1', '2022Q1', '2023Q1', '2024Q1', '2025Q1', '2026Q1'],
   datasets: [dataFirst, dataSecond,dataThird,dataFourth,dataFifth]
 };
 
@@ -787,11 +787,11 @@ window.onload = function () {
       name: "All",
       color: "darkslategrey",
       dataPoints: [
-        { y: 6.7, label: "White" },
-        { y: 14, label: "Indian/Asian" },
-        { y: 22.3, label: "Coloured" },
-        { y: 35.8, label: "Black" },
-        { y: 31.9, label: "South Africa" }
+        { y: 9.2, label: "White" },
+        { y: 13.6, label: "Indian/Asian" },
+        { y: 23.9, label: "Coloured" },
+        { y: 36.4, label: "Black" },
+        { y: 32.7, label: "South Africa" }
       ]
     },
     {
@@ -800,11 +800,11 @@ window.onload = function () {
       name: "Male",
       color: "darkblue",
       dataPoints: [
-        { y: 5.8, label: "White" },
-        { y: 11.6, label: "Indian/Asian" },
-        { y: 22.1, label: "Coloured" },
-        { y: 33.9, label: "Black" },
-        { y: 30.1, label: "South Africa" }
+        { y: 9.0, label: "White" },
+        { y: 12.9, label: "Indian/Asian" },
+        { y: 22.6, label: "Coloured" },
+        { y: 32.9, label: "Black" },
+        { y: 29.6, label: "South Africa" }
       ]
     },
     {
@@ -813,11 +813,11 @@ window.onload = function () {
       name: "Female",
       color: "deeppink",
       dataPoints: [
-        { y: 7.9, label: "White" },
-        { y: 17.6, label: "Indian/Asian" },
-        { y: 22.6, label: "Coloured" },
-        { y: 38, label: "Black" },
-        { y: 33.9, label: "South Africa" }
+        { y: 9.5, label: "White" },
+        { y: 14.8, label: "Indian/Asian" },
+        { y: 25.4, label: "Coloured" },
+        { y: 40.5, label: "Black" },
+        { y: 36.4, label: "South Africa" }
       ]
     }]
   });
@@ -850,121 +850,11 @@ window.onload = function () {
   
   }
 
-  //17. Working age population
-
-  var Canvas = document.getElementById("Workforce");
-
-Chart.defaults.global.defaultFontFamily = "Lato";
-Chart.defaults.global.defaultFontSize = 18;
-
-var Workforce = {
-    label: "South Africa",
-    data:  [17100000,8000000,3500000,13000000],
-    lineTension: 0,
-    fill: false,
-    backgroundColor: ['springgreen','crimson','dimgray','lightgray']
-  };
-
-
-var Years = {
-  labels: ['Employed', 'Unemployed', 'Discouraged work seekers', 'Not economically active'],
-  datasets: [Workforce]
-};
-
-var chartOptions = {
-    title: {
-      display: true,
-      text: "People of working age(15-64)"
-    },
-  legend: {
-    display: false,
-    labels: {
-      boxWidth: 20,
-      fontColor: 'black'
-    }
-  },
-  scales: {
-    xAxes: [{
-      gridLines: {
-        display: false,
-        color: "black"
-      },
-      scaleLabel: {
-        display: false,
-        labelString: "",
-        fontColor: "black"
-      }
-    }],
-    yAxes: [{
-                    ticks: {
-                    // Shorthand the millions
-                    callback: function(value, index, values) {
-                      if (value >= 1000000000 || value <= -1000000000 ) {
-                        return value / 1e9 + 'B';
-                      } else if (value >= 1000000 || value <= -1000000) {
-                        return value / 1e6 + 'M';
-                      } else  if (value >= 1000 || value <= -1000) {
-                        return value / 1e3 + 'K';
-                      }
-                      return value;
-                    }
-                },
-      gridLines: {
-        color: "black",
-        borderDash: [0.5, 0.6],
-        
-      },
-      scaleLabel: {
-        display: true,
-        labelString: "Population",
-        fontColor: "black"
-      }
-    }]
-  }
-};
-
-var lineChart = new Chart(Canvas, {
-  type: 'bar',
-  data: Years,
-  options: chartOptions
-});
-
-
-//18. Areas of employment
-
-var xValues = ["Formal sector", "Informal sector", "Private households","Agriculture"];
-var yValues = [11700000, 3300000, 1100000, 924000];
-var barColors = [
-  "darkslategrey","skyblue","lightcyan","springgreen"];
-
-new Chart(document.getElementById('Sectors').getContext("2d"), {
-  type: "pie",
-  data: {
-  labels: xValues,
-  datasets: [{
-    backgroundColor: barColors,
-    data: yValues
-  }]
-  },
-  options: {
-    legend: {
-      display: true,
-      position: 'right',
-      labels: {
-        boxWidth: 20,
-        fontColor: 'black'
-      }
-    },
-  title: {
-    display: true,
-    text: "Areas of employment"
-  }
-  }
-});
 
 
 
-//19. reasons for unemployment
+
+//16. reasons for unemployment
 
 var Canvas = document.getElementById("Unemploymentreasons");
 
@@ -973,10 +863,10 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "South Africa",
-    data:  [3421000,2060000,1889000,401000,220000],
+    data:  [3375000,2110000,2109000,307000,235000],
     lineTension: 0,
     fill: false,
-    backgroundColor: ['brown','tomato','maroon','salmon','orangered']
+    backgroundColor: ['brown','maroon','tomato','salmon','orangered']
   };
 
 
@@ -988,7 +878,7 @@ var Years = {
 var chartOptions = {
     title: {
       display: true,
-      text: "reasons for unemployment"
+      text: "Reasons for unemployment"
     },
   legend: {
     display: false,
@@ -1045,7 +935,7 @@ var lineChart = new Chart(Canvas, {
 
 
 
-//20. Labour force characteristics by age group 
+//17. Labour force characteristics by age group 
 
 
 var Canvas = document.getElementById("Agesofwork");
@@ -1055,7 +945,7 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "Employed",
-    data:  [1102000,4719000,5334000,4148000,1775000],
+    data:  [1049000,4543000,5208000,4150000,1805000],
     lineTension: 0,
     fill: false,
     backgroundColor: "springgreen"
@@ -1063,15 +953,15 @@ var dataFirst = {
   
  var dataSecond = {
     label: "Unemployed",
-    data:  [1629000,3064000,1994000,1075000,228000],
+    data:  [1632000,3101000,2088000,1055000,261000],
     lineTension: 0,
     fill: false,
     backgroundColor: "crimson"
   };
   
  var dataThird = {
-    label: "Not economically active",
-    data:  [7555000,2830000,1890000,1752000,2465000],
+    label: "Outside the labour force",
+    data:  [7668000,2972000,2105000,1985000,2568000],
     lineTension: 0,
     fill: false,
     backgroundColor: "dimgray"
@@ -1142,34 +1032,33 @@ var lineChart = new Chart(Canvas, {
 });
 
 
-//21.  Working hours
+//18.Industries employed
 
 
-var Canvas = document.getElementById("Workinghours");
+var Canvas = document.getElementById("IndustriesEmployed");
 
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "Employed",
-    data:  [509000
-,1256000,1230000,9554000,4529000],
+    data:  [960000,476000,1587000,113000,1314000,3320000,1111000,2939000,3828000,1101000],
     lineTension: 0,
     fill: false,
-    backgroundColor: ["springgreen",'springgreen','springgreen','darkgreen','forestgreen']
+    backgroundColor: ["springgreen",'springgreen','springgreen','springgreen','springgreen','springgreen','springgreen','springgreen','springgreen','springgreen']
   };
   
 
 
 var Years = {
-  labels: ['0-15 hours', '15–29 hours', '30–39 hours', '40-45 hours','45h & more'],
+  labels: ['Agriculture', 'Mining', 'Manufacturing', 'Utilities','Construction','Trade','Transport','Finance, Community and social services','Private households'],
   datasets: [dataFirst]
 };
 
 var chartOptions = {
     title: {
       display: true,
-      text: "Working hours per week"
+      text: "Employment by Industry"
     },
   legend: {
     display: false,
@@ -1211,7 +1100,7 @@ var chartOptions = {
       },
       scaleLabel: {
         display: true,
-        labelString: "Employed Population",
+        labelString: "Industries",
         fontColor: "black"
       }
     }]
@@ -1226,7 +1115,7 @@ var lineChart = new Chart(Canvas, {
 
 
 
-// 22. Employment by province
+// 19. Employment by province
 
 var Canvas = document.getElementById("Employmentbyprovince");
 
@@ -1235,10 +1124,10 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "Employed",
-    data:  [5081000,2892000,2812000,1543000,1455000,1255000,935000,750000,355000],
+    data:  [5116000,2722000,2883000,1509000,1333000,1229000,894000,760000,308000],
     lineTension: 0,
     fill: false,
-    backgroundColor:'green'
+    backgroundColor:'seagreen'
   };
 
 
@@ -1307,7 +1196,7 @@ var lineChart = new Chart(Canvas, {
 
 
 
-//23. Unemployment rate
+//20. Unemployment rate
 
 var Canvas = document.getElementById("SAUnemploymentrate");
 
@@ -1315,27 +1204,62 @@ Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
-    label: "Unemployment rate(%)",
-    data:  [20.11, 20.37, 20.3, 20.07, 19.8, 19.64, 19.68, 19.82, 19.93, 19.84, 19.73, 19.66, 19.73, 19.63, 19.56, 19.43, 19.39, 19.51, 20.51, 23.18, 21.42, 21.79, 22.04, 22.61, 22.87, 24.02, 23.99, 24.22, 25.54, 24.34, 28.77, 28.84, 27.99],
+    label: "South Africa",
+    data:  [23.14, 23.46, 23.36, 23.07, 22.7, 22.5, 22.55, 22.74, 22.88, 22.79, 22.65, 22.58, 22.68, 22.57, 22.47, 22.3, 22.26, 22.41, 23.52, 24.68, 24.64, 24.73, 24.56, 24.89, 25.15, 26.54, 27.04, 26.91, 28.47, 29.22, 34.01, 33.27, 32.1, 32.28, 32.39],
     lineTension: 0,
     fill: false,
     backgroundColor:'crimson',
     borderColor:'crimson'
   };
 
+var dataBrazil = {
+    label: "Brazil",
+    data: [6.89, 7.09, 6.03, 6.58, 7.09, 8.04, 9.0, 10.15, 11.12, 10.89, 10.65, 10.64, 11.17, 10.07, 10.55, 9.69, 9.28, 8.27, 9.42, 8.42, 7.58, 7.25, 7.07, 6.76, 8.54, 11.58, 12.79, 12.33, 11.94, 13.7, 13.16, 9.23, 7.95, 6.8, 5.97],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: 'forestgreen',
+    borderColor: 'forestgreen'
+  };
+
+var dataRussia = {
+    label: "Russia",
+    data: [5.11, 5.18, 5.88, 8.13, 9.45, 9.66, 11.81, 13.26, 13.04, 10.58, 8.98, 7.88, 8.21, 7.76, 7.12, 7.06, 6.0, 6.2, 8.3, 7.41, 6.57, 5.48, 5.51, 5.21, 5.62, 5.59, 5.24, 4.87, 4.51, 5.62, 4.75, 3.87, 3.08, 2.43, 2.13],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: 'royalblue',
+    borderColor: 'royalblue'
+  };
+
+var dataIndia = {
+    label: "India",
+    data: [7.64, 7.65, 7.66, 7.59, 7.57, 7.54, 7.57, 7.6, 7.58, 7.59, 7.61, 7.68, 7.63, 7.6, 7.55, 7.55, 7.56, 7.63, 7.64, 7.63, 7.61, 7.64, 7.68, 7.66, 7.63, 7.61, 7.63, 7.65, 6.51, 7.86, 6.38, 4.82, 4.17, 4.17, 4.22],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: 'darkorange',
+    borderColor: 'darkorange'
+  };
+
+var dataChina = {
+    label: "China",
+    data: [2.37, 2.37, 2.69, 2.9, 3.0, 3.12, 3.23, 3.24, 3.25, 3.26, 3.8, 4.24, 4.58, 4.49, 4.52, 4.43, 4.35, 4.59, 4.72, 4.53, 4.55, 4.98, 4.6, 4.63, 4.65, 4.56, 4.47, 4.31, 4.56, 5.0, 4.55, 4.98, 4.67, 4.59, 4.62],
+    lineTension: 0,
+    fill: false,
+    backgroundColor: 'gold',
+    borderColor: 'gold'
+  };
 
 var Years = {
-  labels:['1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-  datasets: [dataFirst]
+  labels:['1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+  datasets: [dataFirst, dataBrazil, dataRussia, dataIndia, dataChina]
 };
 
 var chartOptions = {
     title: {
       display: true,
-      text: "SA Unemployment rate(%)"
+      text: "BRICS Unemployment rate(%)"
     },
   legend: {
-    display: false,
+    display: true,
     labels: {
       boxWidth: 20,
       fontColor: 'black'
@@ -1387,4 +1311,34 @@ var lineChart = new Chart(Canvas, {
   options: chartOptions
 });
 
+//21. Term of Unemployment
 
+var xValues = ["Long-term unemployment", "Short-term unemployment"];
+var yValues = [6301000, 1836000];
+var barColors = [
+  "red","blue"];
+
+new Chart(document.getElementById('UnemploymentTerm').getContext("2d"), {
+  type: "pie",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+  },
+  options: {
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        boxWidth: 20,
+        fontColor: 'black'
+      }
+    },
+  title: {
+    display: true,
+    text: "Unemployment term"
+  }
+  }
+});
