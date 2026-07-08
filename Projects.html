@@ -126,58 +126,121 @@
                      <hr>
                   </div>
                   <!--Unemployment-->
-                  <div id="Unemployment"></div>
-                  <h2 class="Data collapsible">Employment and unemployment South Africa</h2>
-                  <div class="Collapse-content">
-                     <em>Last edited March 2025</em>
-                     <p>Some interesting insights regarding employment and unemployment from the Quarterly Labour Force Survey 2024 quarter 4, released on 18 February 2025
-                        by Stats SA. For the full comprehensive report visit: <a src="https://www.statssa.gov.za/publications/P0211/P02114thQuarter2024.pdf">https://www.statssa.gov.za/publications/P0211/P02114thQuarter2024.pdf</a>.
-                     </p>
-                     <h3>Unemployment</h3>
-                     <div class="row">
-                        <div class="col-8">
-                           <p>Data from:<a href="https://ourworldindata.org/">https://ourworldindata.org/</a>, it is the only data not from the Stats SA report in this segment.</p>
-                           <canvas id="SAUnemploymentrate" style="width:100%;"></canvas>
+<div id="Unemployment"></div>
+                     <h2 class="Data collapsible">Employment and unemployment South Africa</h2>
+                     <div class="Collapse-content">
+                        <h2>Employment and unemployment South Africa</h2>
+                        <em>Last edited July 2026</em>
+                        <div>&nbsp;As many of us may already know, unemployment is one of the biggest problems we have in South Africa, If not the biggest problem. In this section, we delve into some insights from the latest Quarterly Labor Force Survey of 2026 to better understand, from different angles, where South Africa truly stands in terms of unemployment.<br><br>Before we delve into the stats, here&apos;s a quick revision of important unemployment concepts. What is unemployment? There are many definitions of unemployment, but the simplest is that it occurs when people who are able and willing to work cannot find a job. There are 3 main types of unemployment :</div>
+                        <ul>
+                           <li><strong>Cyclical unemployment</strong>: Happens during an economic downturn, when demand for goods and services is low, hence the demand for people who offer skills to produce said goods and services is also low, usually medium term (1-12 months)</li>
+                           <li><strong>Structural unemployment</strong>: Happens when there is a mismatch for the skills employers are looking for and the skills the people who are looking for a job have to offer. It happens even when economic conditions are good and lasts long term (more than 12 months), as acquiring new skills takes time. The introduction of new technology can lead to this type of unemployment as it disrupts market dynamics.&nbsp;</li>
+                           <li><strong>Frictional unemployment</strong>: Happens when people move between jobs or transition into and out of the labor force, or when recent grads enter the market. It helps achieve the efficient allocation of labor across the economy as businesses spend time filling the right candidate and individuals spend time finding the right job (short term, less than a month)</li>
+                        </ul>
+                        <h3 style="text-align: center;">SA Unemployment rate over the years compared to other BRICS countries</h3>
+                        <figure>
+                           <canvas id="SAUnemploymentrate" style="width:100%; height:700px"></canvas>
+                           <figcaption>https://ourworldindata.org/</figcaption>
+                        </figure>
+                        <hr>
+                        <h2 style="text-align: center;">South African Labour Force Survey 2026</h2>
+                        <p> Some insights regarding employment and unemployment from the Quarterly Labour Force Survey 2026 quarter 1, released on 12 May 2026
+                           by Stats SA. For the full comprehensive report visit: <a href="https://www.statssa.gov.za/publications/P0211/P02111stQuarter2026.pdf">https://www.statssa.gov.za/publications/P0211/P02111stQuarter2026.pdf</a>.
+                        </p>
+                        <h3 style="text-align: center;">The South African Labour Market Structure</h3>
+                        <em style="text-align: center;">(Hover on any of the subgroups below to see the formal definitions) </em>
+                        <div class="tree">
+                           <ul>
+                              <li>
+                                 <a href="#" class="tooltip">
+                                 Working Age Population (<strong>15-64</strong>)<br><strong>42.2 million</strong>
+                                 <span class="tooltiptext">The working age population consists of all individuals aged 15 years and older who are considered capable of working regardless of their employment status.</span>
+                                 </a>
+                                 <ul>
+                                    <li>
+                                       <a href="#" class="tooltip">
+                                       Labour Force<br><strong>24.9 million</strong>
+                                       <span class="tooltiptext">The labour force comprises all persons who are employed, plus all persons who are unemployed.</span>
+                                       </a>
+                                       <ul>
+                                          <li>
+                                             <a href="#" class="tooltip">
+                                             Employed<br><strong>16.8 million</strong>
+                                             <span class="tooltiptext">Employed persons are those aged 15–64 years who, during the reference week, did any work for at least one hour, or had a job or business but were not at work (i.e. were temporarily absent).</span>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="#" class="tooltip">
+                                             Unemployed<br><strong>8.1 million</strong>
+                                             <span class="tooltiptext">Unemployed persons according to the Official definition are those (aged 15–64 years) who: <br>a) were not employed in reference week;<br>b) actively looked for work in past 4 weeks;<br>c) were available to start work; OR<br>d) have a future job starting at a definite date.</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                       <a href="#" class="tooltip">
+                                       Outside the Labour Force<br><strong>17.3 million</strong>
+                                       <span class="tooltiptext">Persons aged 15–64 years who are neither employed nor unemployed in the reference period.</span>
+                                       </a>
+                                       <ul>
+                                          <li>
+                                             <a href="#" class="tooltip">
+                                             Potential Labour Force<br><strong>4.9 million</strong>
+                                             <span class="tooltiptext">The potential labour force includes persons who are not in the labour force, but are either available for work but not actively seeking employment or actively seeking employment but not currently available to work.</span>
+                                             </a>
+                                             <ul>
+                                                <li>
+                                                   <a href="#" class="tooltip">
+                                                   Available, not seeking
+                                                   <span class="tooltiptext">Available potential job-seekers: Persons outside the labour force who did not carry out activities to seek employment but wanted employment and were currently available.</span>
+                                                   </a>
+                                                </li>
+                                                <li>
+                                                   <a href="#" class="tooltip">
+                                                   Not available but seeking
+                                                   <span class="tooltiptext">Unavailable jobseekers: Persons outside the labour force who carried out activities to seek employment, were not currently available but would become available within a short subsequent period.</span>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </li>
+                                          <li>
+                                             <a href="#" class="tooltip">
+                                             Others Outside the Labour Force<br><strong>12.4 million</strong>
+                                             <span class="tooltiptext">Persons outside the labour force who do not fit into the Potential Labour Force category (e.g., full-time students, discouraged work-seekers who do not meet availability metrics, or those completely retired/unable to work).</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
                         </div>
-                        <div class="col-4">
-                           <p>According to the official definition, Unemployed people(15-64 years) are those who are not employed and are actively looking for work, are able to work, and are available to work, but are unable to find work.</p>
-                           <p>The highest rises in the rate of unemployment are in 2009 and 2021, which can be linked to the 2008-2009 global financial crisis and the 2020-2022 Covid-19 pandemic.</p>
-                        </div>
-                     </div>
-                     <p>Below are the unemployment rates according to the level of education of individuals. From these, we can see the unemployment rates for graduates(including bachelor's degrees, honors, and above) and people with
-                        qualifications from other tertiary institutions are always lower than the national unemployment rate, while those with no matric or only matric are always above.
-                     </p>
-                     <canvas id="EduLvl" style="width:100%"></canvas>
-                     <p>Below is the unemployment levels according to race and sex.</p>
-                     <div id="UnemploymentGroups" style="width: 100%; height:500px"></div>
-                     <p>Below are the reasons for unemployment, as is evident, it is most difficult for people entering the job market for the first time.</p>
-                     <canvas id="Unemploymentreasons" style="width:100%;max-width:600px"></canvas>
-                     <hr>
-                     <h3>The characteristics of the labour force</h3>
-                     <div class="row">
-                        <div class="col-4">
-                           <p>These are people of working age in South Africa, amounting to 41.6 million. They can be classified into 2 categories, the labour force, which includes the employed and unemployed,
-                              amounts to approximately 25.1 million. And the not economically active includes discouraged work seekers(21%) and other not economic active individuals which comprise Students(37.3%),
-                              Home-maker(13.6%), too old or too young for work(10.9%), illness/disability (9.3), other(8%).
-                           </p>
-                        </div>
-                        <div class="col-8">
-                           <canvas id="Workforce" style="width:100%;"></canvas>
-                        </div>
-                     </div>
-                     <p>Levels of employment by province</p>
+                        <canvas id="Agesofwork" style="width:100%"></canvas><hr>
+                     <h3 style="text-align: center;">Where are people employed?</h3>
                      <canvas id="Employmentbyprovince" style="width:100%"></canvas>
-                     <div class="row">
-                        <div class="col-7">
-                           <canvas id="Agesofwork" style="width:100%"></canvas>
+                     <canvas id="IndustriesEmployed" style="width:100%"></canvas>
+                     <hr>
+                      <h3 style="text-align: center;">Breaking down the unemployment rate by demographics</h3>
+
+                        <p>Below are the unemployment rates according to the level of education of individuals. From these, we can see the unemployment rates for graduates(including bachelor's degrees, honors, and above) and people with
+                           qualifications from other tertiary institutions are always lower than the national unemployment rate, while those with no matric or only matric are always above.
+                        </p>
+                        <canvas id="EduLvl" style="width:100%"></canvas>
+                        <div id="UnemploymentGroups" style="width: 100%; height:500px"></div>
+                        <hr>
+                        <h3 style="text-align: center;">Types of unemployment</h3>
+                        <p>Below are the terms(with long term being a period of more than 1 year) and reasons for unemployment, as is evident, it is most difficult for people entering the job market for the first time additionally, more than 76% of unemployed people fall under long term unemployment, which supports the claim that the longer you stay unemployed, the more difficullt it is to find a job.</p>
+                        <h3></h3>
+                        <div class="row">
+                           <div class="col-4">
+                              <canvas id="UnemploymentTerm" style="width:100%;max-width:600px"></canvas>
+                           </div>
+                           <div class="col-8">
+                              <canvas id="Unemploymentreasons" style="width:100%;max-width:600px"></canvas>
+                           </div>
                         </div>
-                        <div class="col-4">
-                           <canvas id="Sectors" style="width:100%"></canvas>
-                        </div>
+                        <hr>
                      </div>
-                     <p> Below is the division of hours worked by each of the employed persons(17.1 million total) in a week: </p>
-                     <canvas id="Workinghours" style="width:100%;max-width:600px"></canvas>
-                  </div>
                   <!-- One piece -->
                   <div id="One Piece Stats"></div>
                   <h2 class="Data collapsible">One Piece Stats</h2>
