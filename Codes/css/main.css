@@ -2847,7 +2847,13 @@ li.myoptions label {
 
 
 /*tree diagram*/
-
+.tree {
+  max-width: 100%;       
+  overflow-x: auto;      
+  overflow-y: visible;   
+  padding: 20px 10px;    
+  -webkit-overflow-scrolling: touch; 
+}
 /* --- TOOLTIP SYSTEM (Mobile Friendly) --- */
 .tooltip {
   position: relative;
