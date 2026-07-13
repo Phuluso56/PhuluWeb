@@ -22,90 +22,88 @@
       <style>
          /* Chart Sizing Constraints */
          .dashboard-container {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            max-width: 800px; /* Limits the max-width to center beautifully */
-            margin: 30px auto;
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+         max-width: 800px; /* Limits the max-width to center beautifully */
+         margin: 30px auto;
          }
          .chart-card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 24px;
+         background: #ffffff;
+         border-radius: 12px;
+         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+         padding: 24px;
          }
          .chart-container {
-            position: relative;
-            height: 400px; /* Constrains height while letting the grid remain responsive */
-            width: 100%;
-            margin-bottom: 20px;
+         position: relative;
+         height: 400px; /* Constrains height while letting the grid remain responsive */
+         width: 100%;
+         margin-bottom: 20px;
          }
-
          /* Slideshow Structural Constraints */
          .container {
-            max-width: 100%;
-            position: relative;
-            margin: auto;
-            background: #111;
-            border-radius: 8px;
-            overflow: hidden;
+         max-width: 100%;
+         position: relative;
+         margin: auto;
+         background: #111;
+         border-radius: 8px;
+         overflow: hidden;
          }
          .mySlides {
-            display: none;
-            text-align: center;
-            height: 500px;
-            background-color: #1a1a1a;
-            will-change: transform, opacity;
-            transform: translateZ(0);
+         display: none;
+         text-align: center;
+         height: 500px;
+         background-color: #1a1a1a;
+         will-change: transform, opacity;
+         transform: translateZ(0);
          }
          .mySlides img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
          }
-
          /* Slider Controls Positioning */
          .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -25px;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 10;
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         width: auto;
+         padding: 16px;
+         margin-top: -25px;
+         color: white;
+         font-weight: bold;
+         font-size: 24px;
+         border-radius: 0 3px 3px 0;
+         user-select: none;
+         -webkit-user-select: none;
+         background-color: rgba(0, 0, 0, 0.4);
+         z-index: 10;
          }
          .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+         right: 0;
+         border-radius: 3px 0 0 3px;
          }
          .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+         background-color: rgba(0, 0, 0, 0.8);
          }
          .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-            background: rgba(0,0,0,0.5);
-            border-bottom-right-radius: 4px;
-            z-index: 10;
+         color: #f2f2f2;
+         font-size: 12px;
+         padding: 8px 12px;
+         position: absolute;
+         top: 0;
+         background: rgba(0,0,0,0.5);
+         border-bottom-right-radius: 4px;
+         z-index: 10;
          }
          .caption-container {
-            text-align: center;
-            background-color: #222;
-            padding: 6px 16px;
-            color: white;
+         text-align: center;
+         background-color: #222;
+         padding: 6px 16px;
+         color: white;
          }
          .caption-container p {
-            margin: 0;
+         margin: 0;
          }
       </style>
    </head>
@@ -114,7 +112,8 @@
          <div id="main">
             <div class="inner">
                <header id="header"><a href="Hobbies.html" class="logo"><strong>Hobbies</strong> Section &#9998;</a>
-               <button onclick="DarkMode()">Dark mode ☽</button></header>
+                  <button onclick="DarkMode()">Dark mode ☽</button>
+               </header>
                <a id="return-to-top"><i class="fas"></i></a> 
                <section>
                   <header class="main">
@@ -136,46 +135,76 @@
                      </tr>
                   </table>
                   <hr>
-                  
                   <div id="Running">
                      <h2 class="HobbiesTopic collapsible">Running</h2>
                      <div class="Collapse-content">
                         <figure>
+                           <img src="./Files/Running/21km Run 1 Mandela Day Walk & Run 19 July 2026.jpg" alt="" style="width:90%"/>
+                           <figcaption>1st 21km run | Mandela Day Walk & Run 2026 | 19 July 2026</figcaption>
+                        </figure>
+                        <figure>
                            <img src="./Files/Running/10km Run 6 Discovery Vitality Run Against Cancer Run_21 June 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>6th 10km run |Race Against Cancer With Discovery Vitality|21 June 2026</figcaption>
+                           <figcaption>6th 10km run | Race Against Cancer With Discovery Vitality | 21 June 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 5 Standard Bank Run_30 May 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>5th 10km run |Standard Bank Run|30 May 2026</figcaption>
+                           <figcaption>5th 10km run | Standard Bank Run | 30 May 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 4 Joburg City Marathon_22 March 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>4th 10km run| Joburg City Marathon|22 March 2026</figcaption>
+                           <figcaption>4th 10km run | Joburg City Marathon | 22 March 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 3 Legends Township Marathon_22 Feb 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>3rd 10km Run |Legends Township Marathon|22 Feb 2026</figcaption>
+                           <figcaption>3rd 10km Run | Legends Township Marathon | 22 Feb 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 2 Joburg North City Marathon_01 Feb 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>2nd 10km run|Joburg North City Marathon|01 Feb 2026</figcaption>
+                           <figcaption>2nd 10km run | Joburg North City Marathon | 01 Feb 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 1 Soweto African Bank Marathon_29 Nov 2025.jpg" alt="" style="width:90%"/>
-                           <figcaption>1st 10km run| Soweto African Bank Marathon|29 Nov 2025 </figcaption>
+                           <figcaption>1st 10km run | Soweto African Bank Marathon | 29 Nov 2025 </figcaption>
                         </figure>
-                        <h2 style="text-align: center;"><u>My running stats</u></h2>
+                        <h2 style="text-align: center;"><u>My Running Stats</u></h2>
+                        <h3 style="text-align: center; color: #1e3a8a; margin-top: 20px;">10km Race Performance</h3>
                         <div class="dashboard-container">
-                           <div class="chart-card">
-                              <div class="chart-container">
-                                 <canvas id="completionTimeChart"></canvas>
+                           <div class="row">
+                              <div class="col-6">
+                                 <div class="chart-card">
+                                    <div class="chart-container">
+                                       <canvas id="completionTimeChart"></canvas>
+                                    </div>
+                                 </div>
                               </div>
-                              <div class="chart-container">
-                                 <canvas id="paceChart"></canvas>
+                              <div class="col-6">
+                                 <div class="chart-card">
+                                    <div class="chart-container">
+                                       <canvas id="paceChart"></canvas>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>
-
+                        <h3 style="text-align: center; color: #b91c1c; margin-top: 40px;">21km Race Performance</h3>
+                        <div class="dashboard-container">
+                           <div class="row">
+                              <div class="col-6">
+                                 <div class="chart-card">
+                                    <div class="chart-container">
+                                       <canvas id="completionTimeChart21k"></canvas>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div class="chart-card">
+                                    <div class="chart-container">
+                                       <canvas id="paceChart21k"></canvas>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                         <script>
                            function formatSecondsToTime(totalSeconds) {
                                const hrs = Math.floor(totalSeconds / 3600);
@@ -183,33 +212,34 @@
                                const secs = Math.floor(totalSeconds % 60);
                                return `${hrs}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
                            }
-                   
+                           
                            function formatSecondsToPace(totalSeconds) {
                                const mins = Math.floor(totalSeconds / 60);
                                const secs = Math.floor(totalSeconds % 60);
                                return `${mins}:${secs.toString().padStart(2, '0')} /km`;
                            }
-                   
-                           const raceLabels = [
+                           
+                           // --- 10KM DATA ---
+                           const raceLabels10k = [
                                ['29 Nov 2025'],
                                ['01 Feb 2026'],
                                ['22 Feb 2026'],
                                ['22 Mar 2026'],
                                ['31 May 2026'],
                                ['21 June 2026']
-
                            ];
-                   
-                           const completionTimesInSeconds = [5152, 5211, 4463, 4263, 3956, 3905];
-                   
-                           const ctxTime = document.getElementById('completionTimeChart').getContext('2d');
-                           new Chart(ctxTime, {
+                           
+                           const completionTimesInSeconds10k = [5152, 5211, 4463, 4263, 3956, 3905];
+                           const pacesInSeconds10k = [515.2, 521.1, 446.3, 426.3, 395.6, 390.5];
+                           
+                           const ctxTime10k = document.getElementById('completionTimeChart').getContext('2d');
+                           new Chart(ctxTime10k, {
                                type: 'bar',
                                data: {
-                                   labels: raceLabels,
+                                   labels: raceLabels10k,
                                    datasets: [{
                                        label: '10km Finish Time',
-                                       data: completionTimesInSeconds,
+                                       data: completionTimesInSeconds10k,
                                        backgroundColor: 'rgba(30, 58, 138, 0.85)',
                                        hoverBackgroundColor: '#1e3a8a',
                                        borderRadius: 6,
@@ -222,7 +252,7 @@
                                    plugins: {
                                        title: {
                                            display: true,
-                                           text: '10km runs completion times',
+                                           text: '10km Completion Times',
                                            font: { size: 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
@@ -246,17 +276,15 @@
                                    }
                                }
                            });
-                   
-                           const pacesInSeconds = [515.2, 521.1, 446.3, 426.3, 395.6, 390.5];
-                   
-                           const ctxPace = document.getElementById('paceChart').getContext('2d');
-                           new Chart(ctxPace, {
+                           
+                           const ctxPace10k = document.getElementById('paceChart').getContext('2d');
+                           new Chart(ctxPace10k, {
                                type: 'bar',
                                data: {
-                                   labels: raceLabels,
+                                   labels: raceLabels10k,
                                    datasets: [{
                                        label: 'Avg Pace',
-                                       data: pacesInSeconds,
+                                       data: pacesInSeconds10k,
                                        backgroundColor: 'rgba(14, 116, 144, 0.85)',
                                        hoverBackgroundColor: '#0e7490',
                                        borderRadius: 6,
@@ -269,7 +297,109 @@
                                    plugins: {
                                        title: {
                                            display: true,
-                                           text: '10km runs average pace per Kilometer',
+                                           text: '10km Average Pace per Kilometer',
+                                           font: { size: 16, weight: 'bold' }
+                                       },
+                                       legend: { display: false },
+                                       tooltip: {
+                                           callbacks: {
+                                               label: function(context) {
+                                                   return ` Pace: ${formatSecondsToPace(context.parsed.y)}`;
+                                               }
+                                           }
+                                       }
+                                   },
+                                   scales: {
+                                       x: { grid: { display: false } },
+                                       y: {
+                                           title: { display: true, text: 'Pace (MM:SS /km)' },
+                                           ticks: {
+                                               callback: function(value) { return formatSecondsToPace(value); },
+                                               stepSize: 60
+                                           }
+                                       }
+                                   }
+                               }
+                           });
+                           
+                           
+                           // --- 21KM DATA---
+
+                           const raceLabels21k = [
+                               ['19 July 2026']
+                           ];
+                           
+                           const completionTimesInSeconds21k = [0]; 
+                           
+                          
+                           const pacesInSeconds21k = [0]; 
+                           
+                           const ctxTime21k = document.getElementById('completionTimeChart21k').getContext('2d');
+                           new Chart(ctxTime21k, {
+                               type: 'bar',
+                               data: {
+                                   labels: raceLabels21k,
+                                   datasets: [{
+                                       label: '21km Finish Time',
+                                       data: completionTimesInSeconds21k,
+                                       backgroundColor: 'rgba(185, 28, 28, 0.85)', 
+                                       hoverBackgroundColor: '#b91c1c',
+                                       borderRadius: 6,
+                                       borderWidth: 0
+                                   }]
+                               },
+                               options: {
+                                   responsive: true,
+                                   maintainAspectRatio: false,
+                                   plugins: {
+                                       title: {
+                                           display: true,
+                                           text: '21km Completion Times',
+                                           font: { size: 16, weight: 'bold' }
+                                       },
+                                       legend: { display: false },
+                                       tooltip: {
+                                           callbacks: {
+                                               label: function(context) {
+                                                   return ` Time: ${formatSecondsToTime(context.parsed.y)}`;
+                                               }
+                                           }
+                                       }
+                                   },
+                                   scales: {
+                                       x: { grid: { display: false } },
+                                       y: {
+                                           title: { display: true, text: 'Duration (HH:MM:SS)' },
+                                           ticks: {
+                                               callback: function(value) { return formatSecondsToTime(value); },
+                                               stepSize: 1200 // Higher step size for longer 21km charts
+                                           }
+                                       }
+                                   }
+                               }
+                           });
+                           
+                           const ctxPace21k = document.getElementById('paceChart21k').getContext('2d');
+                           new Chart(ctxPace21k, {
+                               type: 'bar',
+                               data: {
+                                   labels: raceLabels21k,
+                                   datasets: [{
+                                       label: 'Avg Pace',
+                                       data: pacesInSeconds21k,
+                                       backgroundColor: 'rgba(217, 119, 6, 0.85)', 
+                                       hoverBackgroundColor: '#d97706',
+                                       borderRadius: 6,
+                                       borderWidth: 0
+                                   }]
+                               },
+                               options: {
+                                   responsive: true,
+                                   maintainAspectRatio: false,
+                                   plugins: {
+                                       title: {
+                                           display: true,
+                                           text: '21km Average Pace per Kilometer',
                                            font: { size: 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
@@ -294,61 +424,57 @@
                                }
                            });
                         </script>
-                        <h2 text-align: center;><u>My Running Certificates</u></h2>
+                        <h2 style="text-align: center;"><u>My Running Certificates</u></h2>
                         <table style="width:100%">
-                        <tr>
-                           <th>Event</th>
-                           <th>Certificate</th>
-                        </tr>
                            <tr>
-                           <td>
-                              <p>6th 10km run |Race Against Cancer With Discovery Vitality|21 June 2026</p>
-
-                           </td>
-                           <td><a href="./Files/Running/10km Race Against Cancer With Discovery Vitality Certificate.pdf" target="_blank">10km Race Against Cancer With Discovery Vitality Certificate.pdf</a></td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <p>5th 10km run |Standard Bank Run|30 May 2026</p>
-                           </td>
-                           <td><a href="./Files/Running/10km Standard Bank Run Certificate.pdf" target="_blank">10km Standard Bank Run Certificate.pdf</a></td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <p>4th 10km run| Joburg City Marathon|22 March 2026</p>
-
-                           </td>
-                           <td><a href="./Files/Running/10km Johannesburg City Marathon Certificate.pdf" target="_blank">10km Johannesburg City Marathon Certificate.pdf</a></td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <p>3rd 10km Run |Legends Township Marathon|22 Feb 2026</p>
-                           </td>
-                           <td><a href="./Files/Running/10km Legends Township Marathon Certificate.pdf" target="_blank">10km Legends Township Marathon Certificate.pdf</a></td>
-                        </tr>
-                                                <tr>
-                           <td>
-                              <p>2nd 10km run|Joburg North City Marathon|01 Feb 2026</p>
-                           </td>
-                           <td><a href="./Files/Running/10km Joburg North City Marathon Certificate.pdf" target="_blank">10km Joburg North City Marathon Certificate.pdf</a></td>
-                        </tr>
-                                                <tr>
-                           <td>
-                              <p>1st 10km run| Soweto African Bank Marathon|29 Nov 2025 </p>
-                           </td>
-                           <td><a href="./Files/Running/10km African bank Soweto Marathon Certificate.pdf" target="_blank">10km African bank Soweto Marathon Certificate</a></td>
-                        </tr>
-                     </table>
-                        <style>
-  .strava-badge- { display: inline-block; height: 48px; }
-  .strava-badge- img { visibility: hidden; height: 48px; }
-  .strava-badge-:hover { background-position: 0 -63px; }
-  .strava-badge-follow { height: 48px; width: 48px; background: url(//badges.strava.com/echelon-sprite-48.png) no-repeat 0 0; }
-</style>
-<a href="https://strava.com/athletes/205707286" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-48.png" alt="Strava" /></a>
+                              <th>Event</th>
+                              <th>Certificate</th>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>1st 21km run | Mandela Day Walk & Run 2026 | 19 July 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/21km Mandela Day Walk & Run 2026.pdf" target="_blank">21km Mandela Day Walk & Run 2026.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>6th 10km run | Race Against Cancer With Discovery Vitality | 21 June 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/10km Race Against Cancer With Discovery Vitality Certificate.pdf" target="_blank">10km Race Against Cancer With Discovery Vitality Certificate.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>5th 10km run | Standard Bank Run | 30 May 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/10km Standard Bank Run Certificate.pdf" target="_blank">10km Standard Bank Run Certificate.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>4th 10km run | Joburg City Marathon | 22 March 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/10km Johannesburg City Marathon Certificate.pdf" target="_blank">10km Johannesburg City Marathon Certificate.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>3rd 10km Run | Legends Township Marathon | 22 Feb 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/10km Legends Township Marathon Certificate.pdf" target="_blank">10km Legends Township Marathon Certificate.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>2nd 10km run | Joburg North City Marathon | 01 Feb 2026</p>
+                              </td>
+                              <td><a href="./Files/Running/10km Joburg North City Marathon Certificate.pdf" target="_blank">10km Joburg North City Marathon Certificate.pdf</a></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>1st 10km run | Soweto African Bank Marathon | 29 Nov 2025 </p>
+                              </td>
+                              <td><a href="./Files/Running/10km African bank Soweto Marathon Certificate.pdf" target="_blank">10km African bank Soweto Marathon Certificate</a></td>
+                           </tr>
+                        </table>
                      </div>
                   </div>
-                  
                   <div id="Drawing">
                      <h2 class="HobbiesTopic collapsible">Drawing</h2>
                      <div class="Collapse-content">
@@ -357,90 +483,72 @@
                               <div class="numbertext">1 / 16</div>
                               <img src="./Files/Art/Art0-Mother & Father.jpg" alt="Mother & Father">
                            </div>
-                           
                            <div class="mySlides">
                               <div class="numbertext">2 / 16</div>
                               <img src="./Files/Art/Art1-Luffy.jpg" alt="Luffy">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">3 / 16</div>
                               <img src="./Files/Art/Art2-Gold Roger.jpg" alt="Gold Roger">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">4 / 16</div>
                               <img src="./Files/Art/Art3-Brook.jpg" alt="Brook">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">5 / 16</div>
                               <img src="./Files/Art/Art4-Kaori.jpg" alt="Kaori">
                            </div>
-                           
                            <div class="mySlides">
                               <div class="numbertext">6 / 16</div>
                               <img src="./Files/Art/Art5-Me and Luffy.jpg" alt="Me & Luffy">
                            </div>
-                               
                            <div class="mySlides">
                               <div class="numbertext">7 / 16</div>
                               <img src="./Files/Art/Art6-Ace.jpg" alt="Ace">
                            </div>
-                           
                            <div class="mySlides">
                               <div class="numbertext">8 / 16</div>
                               <img src="./Files/Art/Art7-Kakashi.jpg" alt="Kakashi">
                            </div>
-                               
                            <div class="mySlides">
                               <div class="numbertext">9 / 16</div>
                               <img src="./Files/Art/Art8-Luffy Skypiea.jpg" alt="Luffy Skypiea">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">10 / 16</div>
                               <img src="./Files/Art/Art9-Okakuri.png" alt="Okabe and Kurisu">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">11 / 16</div>
                               <img src="./Files/Art/Art10-Ugly Sky.jpg" alt="Ugly Sky">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">12 / 16</div>
                               <img src="./Files/Art/Art11-Mathematics Building.jpg" alt="Mathematics Building">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">13 / 16</div>
                               <img src="./Files/Art/Art12-Rendy and Mulalo.jpg" alt="Rendy and Mulalo">
                            </div>
-
                            <div class="mySlides">
                               <div class="numbertext">14 / 16</div>
                               <img src="./Files/Art/LuffyGraphArt.png" alt="Luffy Graph Art">
                            </div>
-                           
                            <div class="mySlides">
                               <div class="numbertext">15 / 16</div>
                               <img src="./Files/Art/SAGraphArt.png" alt="South African Flag Graph Art">
                            </div>
-                           
                            <div class="mySlides">
                               <div class="numbertext">16 / 16</div>
                               <img src="./Files/Art/K331 Theme Graph Art.png" alt="Mozart Piano sonata 11, K. 331 1st movement theme">
                            </div>
-                               
                            <a class="prev" onclick="plusSlides(-1)">❮</a>
                            <a class="next" onclick="plusSlides(1)">❯</a>
-                           
                            <div class="caption-container">
                               <p id="caption"></p>
                            </div>
                         </div>
-
                         <script>
                            let slideIndex = 1;
                            showSlides(slideIndex);
@@ -473,7 +581,6 @@
                         </script>
                      </div>
                   </div>
-
                   <div id="Music">
                      <h2 class="HobbiesTopic collapsible">Music</h2>
                      <div class="Collapse-content">
@@ -481,7 +588,6 @@
                         <div></div>
                      </div>
                   </div>
-
                   <div id="Philosophy">
                      <h2 class="HobbiesTopic collapsible">Philosophy</h2>
                      <div class="Collapse-content">
@@ -492,7 +598,6 @@
                </section>
             </div>
          </div>
-
          <div id="sidebar">
             <div class="inner">
                <nav id="menu">
@@ -529,7 +634,6 @@
             </div>
          </div>
       </div>
-
       <script src="Codes/js/jquery.min.js"></script>
       <script src="./Codes/js/Graphs.js"></script>
       <script src="Codes/js/browser.min.js"></script>
