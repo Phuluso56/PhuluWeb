@@ -40,6 +40,31 @@
          width: 100%;
          margin-bottom: 20px;
          }
+         /* Two-chart rows (10km time+pace, 21km time+pace) */
+         .row {
+         display: flex;
+         gap: 20px;
+         }
+         .col-6 {
+         flex: 1;
+         min-width: 0; /* prevents flex children from overflowing on small screens */
+         }
+         /* Mobile-friendly overrides */
+         @media (max-width: 700px) {
+         .row {
+         flex-direction: column; /* stack side-by-side charts on narrow screens */
+         }
+         .chart-card {
+         padding: 12px;
+         }
+         .chart-container {
+         height: 280px; /* shorter charts on phones */
+         }
+         .dashboard-container {
+         gap: 24px;
+         margin: 16px auto;
+         }
+         }
          /* Slideshow Structural Constraints */
          .container {
          max-width: 100%;
@@ -105,6 +130,11 @@
          .caption-container p {
          margin: 0;
          }
+         @media (max-width: 700px) {
+         .mySlides {
+         height: 320px;
+         }
+         }
       </style>
    </head>
    <body class="is-preload">
@@ -114,7 +144,7 @@
                <header id="header"><a href="Hobbies.html" class="logo"><strong>Hobbies</strong> Section &#9998;</a>
                   <button onclick="DarkMode()">Dark mode ☽</button>
                </header>
-               <a id="return-to-top"><i class="fas"></i></a> 
+               <a id="return-to-top"><i class="fas"></i></a> 
                <section>
                   <header class="main">
                      <h1>Hobbies Section &#9998;</h1>
@@ -141,10 +171,6 @@
                         <figure>
                            <img src="./Files/Running/10km Run 7 2026 ABSA RUN YOUR CITY JOBURG 10K.jpg" alt="" style="width:90%"/>
                            <figcaption>7th 10km run | 2026 ABSA RUN YOUR CITY JOBURG 10K | 24 September 2026</figcaption>
-                        </figure>
-                        <figure>
-                           <img src="./Files/Running/21km Run 1 Mandela Day Walk & Run 19 July 2026.jpg" alt="" style="width:90%"/>
-                           <figcaption>1st 21km run | Mandela Day Walk & Run 2026 | 19 July 2026</figcaption>
                         </figure>
                         <figure>
                            <img src="./Files/Running/10km Run 6 Discovery Vitality Run Against Cancer Run_21 June 2026.jpg" alt="" style="width:90%"/>
@@ -210,6 +236,8 @@
                            </div>
                         </div>
                         <script>
+                           const isMobile = window.matchMedia('(max-width: 700px)').matches;
+
                            function formatSecondsToTime(totalSeconds) {
                                const hrs = Math.floor(totalSeconds / 3600);
                                const mins = Math.floor((totalSeconds % 3600) / 60);
@@ -258,7 +286,7 @@
                                        title: {
                                            display: true,
                                            text: '10km Completion Times',
-                                           font: { size: 16, weight: 'bold' }
+                                           font: { size: isMobile ? 13 : 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
                                        tooltip: {
@@ -270,12 +298,20 @@
                                        }
                                    },
                                    scales: {
-                                       x: { grid: { display: false } },
+                                       x: {
+                                           grid: { display: false },
+                                           ticks: {
+                                               maxRotation: isMobile ? 60 : 0,
+                                               minRotation: isMobile ? 60 : 0,
+                                               font: { size: isMobile ? 9 : 12 }
+                                           }
+                                       },
                                        y: {
                                            title: { display: true, text: 'Duration (HH:MM:SS)' },
                                            ticks: {
                                                callback: function(value) { return formatSecondsToTime(value); },
-                                               stepSize: 600
+                                               stepSize: 600,
+                                               font: { size: isMobile ? 9 : 12 }
                                            }
                                        }
                                    }
@@ -303,7 +339,7 @@
                                        title: {
                                            display: true,
                                            text: '10km Average Pace per Kilometer',
-                                           font: { size: 16, weight: 'bold' }
+                                           font: { size: isMobile ? 13 : 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
                                        tooltip: {
@@ -315,12 +351,20 @@
                                        }
                                    },
                                    scales: {
-                                       x: { grid: { display: false } },
+                                       x: {
+                                           grid: { display: false },
+                                           ticks: {
+                                               maxRotation: isMobile ? 60 : 0,
+                                               minRotation: isMobile ? 60 : 0,
+                                               font: { size: isMobile ? 9 : 12 }
+                                           }
+                                       },
                                        y: {
                                            title: { display: true, text: 'Pace (MM:SS /km)' },
                                            ticks: {
                                                callback: function(value) { return formatSecondsToPace(value); },
-                                               stepSize: 60
+                                               stepSize: 60,
+                                               font: { size: isMobile ? 9 : 12 }
                                            }
                                        }
                                    }
@@ -360,7 +404,7 @@
                                        title: {
                                            display: true,
                                            text: '21km Completion Times',
-                                           font: { size: 16, weight: 'bold' }
+                                           font: { size: isMobile ? 13 : 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
                                        tooltip: {
@@ -372,12 +416,20 @@
                                        }
                                    },
                                    scales: {
-                                       x: { grid: { display: false } },
+                                       x: {
+                                           grid: { display: false },
+                                           ticks: {
+                                               maxRotation: isMobile ? 60 : 0,
+                                               minRotation: isMobile ? 60 : 0,
+                                               font: { size: isMobile ? 9 : 12 }
+                                           }
+                                       },
                                        y: {
                                            title: { display: true, text: 'Duration (HH:MM:SS)' },
                                            ticks: {
                                                callback: function(value) { return formatSecondsToTime(value); },
-                                               stepSize: 1200 // Higher step size for longer 21km charts
+                                               stepSize: 1200, // Higher step size for longer 21km charts
+                                               font: { size: isMobile ? 9 : 12 }
                                            }
                                        }
                                    }
@@ -405,7 +457,7 @@
                                        title: {
                                            display: true,
                                            text: '21km Average Pace per Kilometer',
-                                           font: { size: 16, weight: 'bold' }
+                                           font: { size: isMobile ? 13 : 16, weight: 'bold' }
                                        },
                                        legend: { display: false },
                                        tooltip: {
@@ -417,12 +469,20 @@
                                        }
                                    },
                                    scales: {
-                                       x: { grid: { display: false } },
+                                       x: {
+                                           grid: { display: false },
+                                           ticks: {
+                                               maxRotation: isMobile ? 60 : 0,
+                                               minRotation: isMobile ? 60 : 0,
+                                               font: { size: isMobile ? 9 : 12 }
+                                           }
+                                       },
                                        y: {
                                            title: { display: true, text: 'Pace (MM:SS /km)' },
                                            ticks: {
                                                callback: function(value) { return formatSecondsToPace(value); },
-                                               stepSize: 60
+                                               stepSize: 60,
+                                               font: { size: isMobile ? 9 : 12 }
                                            }
                                        }
                                    }
